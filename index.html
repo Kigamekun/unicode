@@ -31,52 +31,101 @@
 </head>
 
 <body>
+    <style>
+        #stars {
+            animation: slideUpDown 3s ease infinite;
+        }
+
+        @keyframes slideUpDown {
+            0% {
+                transform: translateY(-10px);
+                /* Posisi awal di atas */
+            }
+
+            50% {
+                transform: translateY(10px);
+                /* Posisi tengah di bawah */
+            }
+
+            100% {
+                transform: translateY(-10px);
+                /* Kembali ke posisi atas */
+            }
+        }
+
+        .buttonStart {
+            width: 335px;
+            height: 60px;
+            background: #1A2634;
+            color: white;
+            border-radius: 30px;
+            font-size: 32px;
+            cursor: pointer;
+            z-index: 99;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .heroHead {
+                font-size: 30px !important;
+            }
+
+            .buttonStart {
+                width: 200px;
+            font-size: 15px;
+
+            }
+
+            
+        }
+    </style>
 
     <div id="app">
-        <div id="navbar" class="container">
-            <div class="brand d-flex gap-3">
-                <img src="assets/img/scode.png" style="width: 50px;height: 50px;" alt="">
-                <h3 class="mt-3">Startcode</h3>
+        <div style="background: url(assets/img/Wave\ BG.svg);background-size: cover;">
+
+            <img src="assets/img/stars.svg" id="stars" style="width: 100%;height: 100vh; position: absolute;" alt="">
+            <div id="navbar" class="container">
+                <div class="brand d-flex gap-3">
+                    <img src="assets/img/scode.png" style="width: 50px;height: 50px;" alt="">
+                    <h3 class="mt-3">Startcode</h3>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>Home</li>
+                        <li>Service</li>
+                        <li>Project</li>
+                        <li>Teams</li>
+                    </ul>
+                </div>
             </div>
-            <div class="menu">
-                <ul>
-                    <li>Home</li>
-                    <li>Service</li>
-                    <li>Project</li>
-                    <li>Teams</li>
-                </ul>
-            </div>
-        </div>
 
 
-        <!-- HERO -->
-        <div id="hero">
+            <!-- HERO -->
+            <div id="hero">
 
 
-            <div style="width:50%;text-align: center;margin: auto;">
-                <h1 style="color:#203E5F ;font-weight: 600;">Adapt with Technology Solution</h1>
-                <p style="font-size: 20px;">make your business path through the world,with the help of technology in
-                    <span style="color: #2C5078;">StartCode</span>.</p>
+                <div style="width:50%;text-align: center;margin: auto;">
+                    <h1 style="color:#203E5F ;font-weight: 600;" class="heroHead">Adapt with Technology Solution</h1>
+                    <p style="font-size: 20px;">make your business path through the world,with the help of technology in
+                        <span style="color: #2C5078;">StartCode</span>.</p>
 
-                <button class="btn mt-5"
-                    style="width:335px;height: 60px; background: #1A2634;color: white;border-radius: 30px;font-size: 32px;">Check
-                    Our
-                    Services</button>
+                    <button class="btn mt-5 buttonStart">Check
+                        Our
+                        Services</button>
+                </div>
             </div>
         </div>
         <!-- END HERO -->
 
         <div id="mainCourse">
-            <div class="d-flex" style="width: 90%;margin: auto;gap: 60px;">
-                <div style="flex: 1;gap: 50px;" class="d-flex row">
+            <div class="d-flex" style="width: 90%;margin: auto;gap: 60px;flex-wrap: wrap;">
+                <div style="flex: 1;gap: 50px;flex-wrap: wrap;" class="d-flex row">
                     <div
                         style="background: #DBECFF;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
-                        <div style="width: 275px;">
+                        <div style="width: 275px;" class="cardCourse">
                             <h3>Software Development</h3>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt
-                                labore et dolore magna aliqua.</p>
+                            <p>Software development is the process of designing, coding, testing, and maintaining
+                                software systems. Discover the key concepts, methodologies, and tools used in the field
+                                of software development.</p>
                         </div>
                         <div>
                             <img src="assets/img/sd.svg" style="width: 270px;" alt="">
@@ -84,12 +133,11 @@
                     </div>
                     <div
                         style="background: #FFE9CA;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
-                        <div style="width: 275px;">
+                        <div style="width: 275px;" class="cardCourse">
                             <h3>Outsourcing</h3>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt
-                                labore et dolore magna aliqua.</p>
+                            <p>Outsourcing is a strategic business practice where companies delegate specific tasks or
+                                functions to external providers. Discover the benefits, challenges, and best practices
+                                for successful outsourcing in this comprehensive guide.</p>
                         </div>
                         <div>
                             <img src="assets/img/sd.svg" style="width: 270px;" alt="">
@@ -98,16 +146,13 @@
                 </div>
                 <div
                     style="background: rgba(255, 229, 249, 60);height: 840px;flex: 1;border-radius: 7px;padding: 50px;">
-                    <center><img src="assets/img/te.svg" style="width: 350px;" alt=""></center>
+                    <center><img src="assets/img/te.svg" style="width: 350px;" class="cardCourse" alt=""></center>
                     <br>
                     <br>
                     <h3>Technology</h3>
                     <h3>Ecosystem</h3>
                     <p>A technology ecosystem refers to the interconnected network of software, hardware, platforms, and
                         services that work together to support and enhance technological innovation. Discover the
-                        components and significance of a technology ecosystem in this comprehensive guide.
-                        A technology ecosystem refers to the interconnected network of software, hardware, platforms,
-                        and services that work together to support and enhance technological innovation. Discover the
                         components and significance of a technology ecosystem in this comprehensive guide.</p>
                 </div>
             </div>
@@ -183,66 +228,82 @@
                         <div class="splide" id="example-grid">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="p-splide__slide splide__slide" >
-                                    <div class="d-flex" style="flex-direction: column;width: 100%;height: 100%;align-items: start;">
-                                        <img src="assets/img/laravel.svg" alt="">
-                                        
-                                        <div class="mt-3">
-                                            <h4 style="font-size: 35px;font-weight: 500;">Laravel</h4>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, enim ut ad sint, eos dolores, assumenda optio minus vel sunt animi quibusdam nihil modi? Pariatur voluptatum earum doloribus doloremque. Optio.</p>
+                                    <li class="p-splide__slide splide__slide">
+                                        <div class="d-flex"
+                                            style="flex-direction: column;width: 100%;height: 100%;align-items: start;">
+                                            <img src="assets/img/laravel.svg" alt="">
+
+                                            <div class="mt-3">
+                                                <h4 style="font-size: 35px;font-weight: 500;">Laravel</h4>
+                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
+                                                    enim ut ad sint, eos dolores, assumenda optio minus vel sunt animi
+                                                    quibusdam nihil modi? Pariatur voluptatum earum doloribus
+                                                    doloremque. Optio.</p>
+                                            </div>
                                         </div>
-                                    </div>    
                                     </li>
                                     <li class="p-splide__slide splide__slide">
-                                        <div class="d-flex" style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                        <div class="d-flex"
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
                                             <img src="assets/img/react.svg" alt="">
-                                            
+
                                             <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">React</h4>
-                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a Lorem ipsum dolor sit.</p>
+                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
+                                                    Lorem ipsum dolor sit.</p>
                                             </div>
-                                        </div>    
+                                        </div>
 
                                     </li>
                                     <li class="p-splide__slide splide__slide">
-                                        <div class="d-flex" style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                        <div class="d-flex"
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
                                             <img src="assets/img/figma.svg" alt="">
-                                            
+
                                             <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">Figma</h4>
-                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a Lorem ipsum dolor sit.</p>
+                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
+                                                    Lorem ipsum dolor sit.</p>
                                             </div>
-                                        </div>    
+                                        </div>
                                     </li>
                                     <li class="p-splide__slide splide__slide">
-                                        <div class="d-flex" style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                        <div class="d-flex"
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
                                             <img src="assets/img/django.svg" alt="">
-                                            
+
                                             <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">Django</h4>
-                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a Lorem ipsum dolor sit.</p>
+                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
+                                                    Lorem ipsum dolor sit.</p>
                                             </div>
-                                        </div>    
+                                        </div>
                                     </li>
                                     <li class="p-splide__slide splide__slide">
-                                        <div class="d-flex" style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                        <div class="d-flex"
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
                                             <img src="assets/img/express.svg" alt="">
-                                            
+
                                             <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">Express</h4>
-                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a Lorem ipsum dolor sit.</p>
+                                                <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
+                                                    Lorem ipsum dolor sit.</p>
                                             </div>
-                                        </div>  
+                                        </div>
                                     </li>
                                     <li class="p-splide__slide splide__slide">
-                                        <div class="d-flex" style="flex-direction: column;width: 100%;height: 100%;align-items: start;">
+                                        <div class="d-flex"
+                                            style="flex-direction: column;width: 100%;height: 100%;align-items: start;">
                                             <img src="assets/img/flutter.svg" alt="">
-                                            
+
                                             <div class="mt-3">
                                                 <h4 style="font-size: 35px;font-weight: 500;">Flutter</h4>
-                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, enim ut ad sint, eos dolores, assumenda optio minus vel sunt animi quibusdam nihil modi? Pariatur voluptatum earum doloribus doloremque. Optio.</p>
+                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
+                                                    enim ut ad sint, eos dolores, assumenda optio minus vel sunt animi
+                                                    quibusdam nihil modi? Pariatur voluptatum earum doloribus
+                                                    doloremque. Optio.</p>
                                             </div>
-                                        </div>    
+                                        </div>
                                     </li>
                                     <li class="p-splide__slide splide__slide"><span
                                             class="p-splide__slide-number">07</span></li>
