@@ -64,6 +64,14 @@
             z-index: 99;
         }
 
+
+        .mainCourseWrapper {
+            width: 90%;
+            margin: auto;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
         @media only screen and (max-width: 600px) {
             .heroHead {
                 font-size: 30px !important;
@@ -71,11 +79,26 @@
 
             .buttonStart {
                 width: 200px;
-            font-size: 15px;
+                font-size: 15px;
 
             }
 
-            
+            .mainCourseDesktop {
+                display: none !important;
+            }
+
+            .mainCourseFotoDesktop {
+                display: none;
+            }
+
+            .cardCourse {
+                display: none;
+            }
+
+            .mainCourseWrapper {
+                flex-direction: column;
+            }
+
         }
     </style>
 
@@ -116,11 +139,25 @@
         </div>
         <!-- END HERO -->
 
-        <div id="mainCourse">
-            <div class="d-flex" style="width: 90%;margin: auto;gap: 60px;flex-wrap: wrap;">
+        <div id="mainCourseDesktop">
+            <div class="d-flex mainCourseWrapper">
                 <div style="flex: 1;gap: 50px;flex-wrap: wrap;" class="d-flex row">
                     <div
                         style="background: #DBECFF;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
+                        
+                        <div class="cardCoursePhone">
+                            <h3 style="font-weight: 400;">Software Development</h3>
+                            <img src="assets/img/softwaredev.svg" width="100%" alt="">
+                            <p>Software development is the process of designing, coding, testing, and maintaining
+                                software systems. Discover the key concepts, methodologies, and tools used in the field
+                                of software development.</p>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
                         <div style="width: 275px;" class="cardCourse">
                             <h3>Software Development</h3>
                             <p>Software development is the process of designing, coding, testing, and maintaining
@@ -128,7 +165,7 @@
                                 of software development.</p>
                         </div>
                         <div>
-                            <img src="assets/img/sd.svg" style="width: 270px;" alt="">
+                            <img src="assets/img/sd.svg" style="width: 270px;" class="mainCourseFotoDesktop" alt="">
                         </div>
                     </div>
                     <div
@@ -140,20 +177,23 @@
                                 for successful outsourcing in this comprehensive guide.</p>
                         </div>
                         <div>
-                            <img src="assets/img/sd.svg" style="width: 270px;" alt="">
+                            <img src="assets/img/sd.svg" style="width: 270px;" class="mainCourseFotoDesktop" alt="">
                         </div>
                     </div>
                 </div>
                 <div
                     style="background: rgba(255, 229, 249, 60);height: 840px;flex: 1;border-radius: 7px;padding: 50px;">
-                    <center><img src="assets/img/te.svg" style="width: 350px;" class="cardCourse" alt=""></center>
-                    <br>
-                    <br>
-                    <h3>Technology</h3>
-                    <h3>Ecosystem</h3>
-                    <p>A technology ecosystem refers to the interconnected network of software, hardware, platforms, and
-                        services that work together to support and enhance technological innovation. Discover the
-                        components and significance of a technology ecosystem in this comprehensive guide.</p>
+                    <div class="cardCourse">
+                        <center><img src="assets/img/te.svg" style="width: 350px;" alt=""></center>
+                        <br>
+                        <br>
+                        <h3>Technology</h3>
+                        <h3>Ecosystem</h3>
+                        <p>A technology ecosystem refers to the interconnected network of software, hardware, platforms,
+                            and
+                            services that work together to support and enhance technological innovation. Discover the
+                            components and significance of a technology ecosystem in this comprehensive guide.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,7 +258,6 @@
                             <button class="btn text-white"
                                 style="background: #1A2634;width: 280px;height: 60px;border-radius: 50px;font-size: 25px;">Learn
                                 More</button>
-
                         </div>
 
                     </div>
