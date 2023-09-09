@@ -35,6 +35,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; 
+    z-index: 2; 
+}
+
+#app {
+    position: relative; 
 }
 
 h3 {
@@ -176,6 +182,12 @@ h1 {
 
 #stars {
     animation: slideUpDown 3s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; 
 }
 
 @keyframes slideUpDown {
@@ -198,6 +210,8 @@ h1 {
 .heroHead {
     width: 90%;
     margin: auto;
+    z-index: 2; 
+    position: relative;
 }
 
 .buttonStart {
