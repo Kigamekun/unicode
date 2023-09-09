@@ -16,13 +16,11 @@ new Splide('#example-grid', {
     },
     breakpoints: {  // ブレークポイントの定義
         600: {
-            height: '10rem',
-            perPage: 1,
+            height: '30rem',
+            perPage: 2,
             grid: {
-                dimensions: [[2, 2], [1, 1], [2, 1], [1, 2], [2, 2], [1, 3], [3, 1]],
+                dimensions: [[1, 1], [2, 1], [2, 1], [1, 1]],
                 gap: {
-                    row: '.5em',
-                    col: '.5em'
                 }
             }
         }

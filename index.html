@@ -31,151 +31,7 @@
 </head>
 
 <body>
-    <style>
-        #stars {
-            animation: slideUpDown 3s ease infinite;
-        }
 
-        @keyframes slideUpDown {
-            0% {
-                transform: translateY(-10px);
-                /* Posisi awal di atas */
-            }
-
-            50% {
-                transform: translateY(10px);
-                /* Posisi tengah di bawah */
-            }
-
-            100% {
-                transform: translateY(-10px);
-                /* Kembali ke posisi atas */
-            }
-        }
-        .heroHead {
-            width: 90%;
-            margin: auto;
-        }
-        .buttonStart {
-            width: 335px;
-            height: 60px;
-            background: #1A2634;
-            color: white;
-            border-radius: 30px;
-            font-size: 32px;
-            cursor: pointer;
-            z-index: 99;
-        }
-
-
-        .mainCourseWrapper {
-            width: 90%;
-            margin: auto;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-
-        .cardCoursePhone {
-            display: none;
-        }
-
-        .portfolioHeading {
-            font-size: 64px;
-            width: 633px;
-            text-align: center;
-            font-weight: 600;
-            line-height: 60px;
-        }
-
-        .skillsHeading {
-
-            font-size: 82px;
-            width: 633px;
-            text-align: left;
-            line-height: 70px;
-            font-weight: 600;
-        }
-
-        .skillsButton {
-            background: #1A2634;
-            width: 280px;
-            height: 60px;
-            border-radius: 50px;
-            font-size: 25px;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .heroHead {
-                font-size: 30px !important;
-            }
-
-            .cardCoursePhone {
-                display: block;
-            }
-
-            .buttonStart {
-                width: 200px;
-                font-size: 15px;
-
-            }
-
-            .portfolioHeading {
-                font-size: 40px;
-                width: 70%;
-                text-align: center;
-                font-weight: 600;
-                line-height: 60px;
-            }
-
-            .mainCourseDesktop {
-                display: none !important;
-            }
-
-            .mainCourseFotoDesktop {
-                display: none;
-            }
-
-            .cardCourse {
-                display: none;
-            }
-
-            .mainCourseWrapper {
-                flex-direction: column;
-            }
-
-            .menu,
-            .menu ul,
-            .menu ul li {
-                display: none;
-            }
-
-            .brand {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .skillsHeading {
-                width: 70%;
-                font-size: 32px;
-            }
-
-            .skillsButton {
-                display: none;
-            }
-
-            .footerContainer {
-                flex-direction: column;
-            }
-
-            .footerContainer .main {
-                flex-direction: column;
-            }
-
-            .footerContainer .brand {
-                margin-bottom: 60px;
-            }
-        }
-    </style>
 
     <div id="app">
         <div style="background: url(assets/img/Wave\ BG.svg);background-size: cover;">
@@ -199,13 +55,11 @@
 
             <!-- HERO -->
             <div id="hero">
-                <div style="width:50%;text-align: center;margin: auto;">
+                <div class="mainHero">
                     <h1 style="color:#203E5F ;font-weight: 600;" class="heroHead">Adapt with Technology Solution</h1>
-                    <p style="font-size: 20px;">make your business path through the world,with the help of technology in
+                    <p>make your business path through the world,with the help of technology in
                         <span style="color: #2C5078;">StartCode</span>.</p>
-                    <button class="btn mt-5 buttonStart">Check
-                        Our
-                        Services</button>
+                    <button class="btn mt-5 buttonStart">Check Our Services</button>
                 </div>
             </div>
         </div>
@@ -215,11 +69,11 @@
             <div class="d-flex mainCourseWrapper">
                 <div style="flex: 1;gap: 50px;flex-wrap: wrap;" class="d-flex row">
                     <div
-                        style="background: #DBECFF;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
+                        style="background: #DBECFF;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12)); ">
                         <div class="cardCoursePhone">
                             <center>
                                 <h3 style="font-weight: 400;">Software Development</h3>
-                                <img src="assets/img/softwaredev.svg" width="100%" alt="">
+                                <img src="assets/img/sd.svg" width="60%" class="mt-5 mb-5" alt="">
                                 <p>Software development is the process of designing, coding, testing, and maintaining
                                     software systems. Discover the key concepts, methodologies, and tools used in the
                                     field
@@ -237,7 +91,7 @@
                         </div>
                     </div>
                     <div
-                        style="background: #FFE9CA;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
+                        style="background: #FFE9CA;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12));">
                         <div class="cardCoursePhone">
                             <center>
                                 <h3 style="font-weight: 400;">Outsourcing</h3>
@@ -256,12 +110,12 @@
                                 for successful outsourcing in this comprehensive guide.</p>
                         </div>
                         <div>
-                            <img src="assets/img/sd.svg" style="width: 270px;" class="mainCourseFotoDesktop" alt="">
+                            <img src="" style="width: 270px;" class="mainCourseFotoDesktop" alt="">
                         </div>
                     </div>
                 </div>
                 <div
-                    style="background: rgba(255, 229, 249, 60);height: 840px;flex: 1;border-radius: 7px;padding: 50px;">
+                    style="background: rgba(255, 229, 249, 60);height: 840px;flex: 1;border-radius: 7px;padding: 50px;filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12));">
                     <div class="cardCoursePhone">
                         <center>
                             <h3 style="font-weight: 400;">Technology Echosystem</h3>
@@ -291,8 +145,8 @@
         <br>
         <div id="portfolio">
             <center>
-                <p class="portfolioHeading">An
-                    application for all your business need
+                <p class="portfolioHeading">An application for all your <span style="color: #2C5078;">Business</span>
+                    need !
                 </p>
             </center>
             <br>
@@ -336,7 +190,7 @@
 
             <div id="skills">
                 <div style="width: 90%;margin: auto;">
-                    <div class="d-flex" style="justify-content: space-between;">
+                    <div class="d-flex skillsWrapper">
                         <p class="skillsHeading">
                             Intergrate with the
                             tools you love
@@ -353,109 +207,88 @@
                         <div class="splide" id="example-grid">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="p-splide__slide splide__slide">
+                                    <li class="p-splide__slide splide__slide"
+                                        style="background: rgba(241, 102, 42,20%);">
                                         <div class="d-flex"
-                                            style="flex-direction: column;width: 100%;height: 100%;align-items: start;">
+                                            style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
                                             <img src="assets/img/laravel.svg" alt="">
 
-                                            <div class="mt-3">
+                                            <!-- <div class="mt-3">
                                                 <h4 style="font-size: 35px;font-weight: 500;">Laravel</h4>
                                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
                                                     enim ut ad sint, eos dolores, assumenda optio minus vel sunt animi
                                                     quibusdam nihil modi? Pariatur voluptatum earum doloribus
                                                     doloremque. Optio.</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
-                                    <li class="p-splide__slide splide__slide">
+                                    <li class="p-splide__slide splide__slide"
+                                        style="background: rgba(84, 197, 248,20%);">
                                         <div class="d-flex"
-                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
                                             <img src="assets/img/react.svg" alt="">
 
-                                            <div class="mt-3">
+                                            <!-- <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">React</h4>
                                                 <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
                                                     Lorem ipsum dolor sit.</p>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                     </li>
-                                    <li class="p-splide__slide splide__slide">
+                                    <li class="p-splide__slide splide__slide"
+                                        style="background: rgba(255, 114, 98,20%);">
                                         <div class="d-flex"
-                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
                                             <img src="assets/img/figma.svg" alt="">
 
-                                            <div class="mt-3">
+                                            <!-- <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">Figma</h4>
                                                 <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
                                                     Lorem ipsum dolor sit.</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
-                                    <li class="p-splide__slide splide__slide">
+                                    <li class="p-splide__slide splide__slide" style="background: rgba(9, 45, 31,20%);">
                                         <div class="d-flex"
-                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center">
                                             <img src="assets/img/django.svg" alt="">
 
-                                            <div class="mt-3">
+                                            <!-- <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">Django</h4>
                                                 <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
                                                     Lorem ipsum dolor sit.</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
-                                    <li class="p-splide__slide splide__slide">
+                                    <li class="p-splide__slide splide__slide"
+                                        style="background: rgba(247, 223, 30,20%);">
                                         <div class="d-flex"
-                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: space-between;gap:10px">
+                                            style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center">
                                             <img src="assets/img/express.svg" alt="">
 
-                                            <div class="mt-3">
+                                            <!-- <div class="mt-3">
                                                 <h4 style="font-size: 15px;font-weight: 500;">Express</h4>
                                                 <p style="font-size: 10px;">Lorem ipsum dolor, sit amet consectetur a
                                                     Lorem ipsum dolor sit.</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
-                                    <li class="p-splide__slide splide__slide">
+                                    <li class="p-splide__slide splide__slide"
+                                        style="background: rgba(84, 197, 248,20%);">
                                         <div class="d-flex"
-                                            style="flex-direction: column;width: 100%;height: 100%;align-items: start;">
+                                            style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
                                             <img src="assets/img/flutter.svg" alt="">
 
-                                            <div class="mt-3">
+                                            <!-- <div class="mt-3">
                                                 <h4 style="font-size: 35px;font-weight: 500;">Flutter</h4>
                                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
                                                     enim ut ad sint, eos dolores, assumenda optio minus vel sunt animi
                                                     quibusdam nihil modi? Pariatur voluptatum earum doloribus
                                                     doloremque. Optio.</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">07</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">08</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">09</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">10</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">11</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">12</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">13</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">14</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">15</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">16</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">17</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">18</span></li>
-                                    <li class="p-splide__slide splide__slide"><span
-                                            class="p-splide__slide-number">19</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -576,7 +409,7 @@
             breakpoints: {
                 600: {
                     perPage: 1,
-                    autoWidth:false
+                    autoWidth: false,
                 }
             }
 

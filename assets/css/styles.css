@@ -112,10 +112,11 @@ h1 {
     position: relative;
     color: #1A2634;
     border-radius: 0.5rem;
-    border: 3px solid #eef5ae;
-    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+    /* border: 3px solid #eef5ae; */
+    /* border: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12)); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
     /* background: #dceb5d; */
-    overflow: hidden;
+    overflow: visible;
     line-height: 1.5;
     padding: 30px;
     transition: border-color 0.15s cubic-bezier(0.54, 0.01, 0.1, 1), background-color 0.15s cubic-bezier(0.54, 0.01, 0.1, 1);
@@ -143,6 +144,13 @@ h1 {
     /* border-color: #13c59d; */
 }
 
+.splide__slide {
+    padding-top: 17px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    padding-bottom: 17px !important;
+}
+
 .splide__pagination {
     bottom: -2.3rem;
     left: 50%;
@@ -163,4 +171,180 @@ h1 {
 .footerUl li{
     list-style: none;
     margin-left: -30px;
+}
+
+
+#stars {
+    animation: slideUpDown 3s ease infinite;
+}
+
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(-10px);
+        /* Posisi awal di atas */
+    }
+
+    50% {
+        transform: translateY(10px);
+        /* Posisi tengah di bawah */
+    }
+
+    100% {
+        transform: translateY(-10px);
+        /* Kembali ke posisi atas */
+    }
+}
+
+.heroHead {
+    width: 90%;
+    margin: auto;
+}
+
+.buttonStart {
+    width: 335px;
+    height: 60px;
+    background: #1A2634;
+    color: white;
+    border-radius: 30px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+
+.mainCourseWrapper {
+    width: 90%;
+    margin: auto;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.cardCoursePhone {
+    display: none;
+}
+
+.portfolioHeading {
+    font-size: 64px;
+    width: 633px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.skillsHeading {
+
+    font-size: 82px;
+    width: 633px;
+    text-align: left;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.skillsButton {
+    background: #1A2634;
+    width: 280px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+
+.mainHero {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mainHero {
+        width: 80%;
+    }
+    .mainHero h1{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 40px !important;
+    }
+
+    .skillsWrapper {
+        justify-content:center;
+        text-align: center;
+    }
+
+    .heroHead {
+        font-size: 30px !important;
+    }
+
+    .cardCoursePhone {
+        display: block;
+    }
+
+
+    .cardCoursePhone h3{
+        font-size: 25px;
+        font-weight: 400;
+    } 
+
+    .buttonStart {
+        width: 200px;
+        font-size: 15px;
+
+    }
+
+    .portfolioHeading {
+        font-size: 30px;
+        width: 70%;
+        text-align: center;
+        font-weight: 600;
+        line-height: 60px;
+    }
+
+    .mainCourseDesktop {
+        display: none !important;
+    }
+
+    .mainCourseFotoDesktop {
+        display: none;
+    }
+
+    .cardCourse {
+        display: none;
+    }
+
+    .mainCourseWrapper {
+        flex-direction: column;
+    }
+
+    .menu,
+    .menu ul,
+    .menu ul li {
+        display: none;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skillsHeading {
+        width: 70%;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .skillsButton {
+        display: none;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+    }
+
+    .footerContainer .main {
+        flex-direction: column;
+    }
+
+    .footerContainer .brand {
+        margin-bottom: 60px;
+    }
 }
