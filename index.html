@@ -52,7 +52,10 @@
                 /* Kembali ke posisi atas */
             }
         }
-
+        .heroHead {
+            width: 90%;
+            margin: auto;
+        }
         .buttonStart {
             width: 335px;
             height: 60px;
@@ -72,15 +75,56 @@
             flex-wrap: wrap;
         }
 
+        .cardCoursePhone {
+            display: none;
+        }
+
+        .portfolioHeading {
+            font-size: 64px;
+            width: 633px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 60px;
+        }
+
+        .skillsHeading {
+
+            font-size: 82px;
+            width: 633px;
+            text-align: left;
+            line-height: 70px;
+            font-weight: 600;
+        }
+
+        .skillsButton {
+            background: #1A2634;
+            width: 280px;
+            height: 60px;
+            border-radius: 50px;
+            font-size: 25px;
+        }
+
         @media only screen and (max-width: 600px) {
             .heroHead {
                 font-size: 30px !important;
+            }
+
+            .cardCoursePhone {
+                display: block;
             }
 
             .buttonStart {
                 width: 200px;
                 font-size: 15px;
 
+            }
+
+            .portfolioHeading {
+                font-size: 40px;
+                width: 70%;
+                text-align: center;
+                font-weight: 600;
+                line-height: 60px;
             }
 
             .mainCourseDesktop {
@@ -99,6 +143,37 @@
                 flex-direction: column;
             }
 
+            .menu,
+            .menu ul,
+            .menu ul li {
+                display: none;
+            }
+
+            .brand {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .skillsHeading {
+                width: 70%;
+                font-size: 32px;
+            }
+
+            .skillsButton {
+                display: none;
+            }
+
+            .footerContainer {
+                flex-direction: column;
+            }
+
+            .footerContainer .main {
+                flex-direction: column;
+            }
+
+            .footerContainer .brand {
+                margin-bottom: 60px;
+            }
         }
     </style>
 
@@ -108,7 +183,7 @@
             <img src="assets/img/stars.svg" id="stars" style="width: 100%;height: 100vh; position: absolute;" alt="">
             <div id="navbar" class="container">
                 <div class="brand d-flex gap-3">
-                    <img src="assets/img/scode.png" style="width: 50px;height: 50px;" alt="">
+                    <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
                     <h3 class="mt-3">Startcode</h3>
                 </div>
                 <div class="menu">
@@ -124,13 +199,10 @@
 
             <!-- HERO -->
             <div id="hero">
-
-
                 <div style="width:50%;text-align: center;margin: auto;">
                     <h1 style="color:#203E5F ;font-weight: 600;" class="heroHead">Adapt with Technology Solution</h1>
                     <p style="font-size: 20px;">make your business path through the world,with the help of technology in
                         <span style="color: #2C5078;">StartCode</span>.</p>
-
                     <button class="btn mt-5 buttonStart">Check
                         Our
                         Services</button>
@@ -144,20 +216,16 @@
                 <div style="flex: 1;gap: 50px;flex-wrap: wrap;" class="d-flex row">
                     <div
                         style="background: #DBECFF;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
-                        
                         <div class="cardCoursePhone">
-                            <h3 style="font-weight: 400;">Software Development</h3>
-                            <img src="assets/img/softwaredev.svg" width="100%" alt="">
-                            <p>Software development is the process of designing, coding, testing, and maintaining
-                                software systems. Discover the key concepts, methodologies, and tools used in the field
-                                of software development.</p>
+                            <center>
+                                <h3 style="font-weight: 400;">Software Development</h3>
+                                <img src="assets/img/softwaredev.svg" width="100%" alt="">
+                                <p>Software development is the process of designing, coding, testing, and maintaining
+                                    software systems. Discover the key concepts, methodologies, and tools used in the
+                                    field
+                                    of software development.</p>
+                            </center>
                         </div>
-                        
-                        
-                        
-                        
-                        
-                        
                         <div style="width: 275px;" class="cardCourse">
                             <h3>Software Development</h3>
                             <p>Software development is the process of designing, coding, testing, and maintaining
@@ -170,6 +238,17 @@
                     </div>
                     <div
                         style="background: #FFE9CA;border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 25px;">
+                        <div class="cardCoursePhone">
+                            <center>
+                                <h3 style="font-weight: 400;">Outsourcing</h3>
+                                <img src="assets/img/outsorce.svg" class="mt-5" style="width: 80%;" alt="">
+                                <p class="mt-5">Software development is the process of designing, coding, testing, and
+                                    maintaining
+                                    software systems. Discover the key concepts, methodologies, and tools used in the
+                                    field
+                                    of software development.</p>
+                            </center>
+                        </div>
                         <div style="width: 275px;" class="cardCourse">
                             <h3>Outsourcing</h3>
                             <p>Outsourcing is a strategic business practice where companies delegate specific tasks or
@@ -183,6 +262,16 @@
                 </div>
                 <div
                     style="background: rgba(255, 229, 249, 60);height: 840px;flex: 1;border-radius: 7px;padding: 50px;">
+                    <div class="cardCoursePhone">
+                        <center>
+                            <h3 style="font-weight: 400;">Technology Echosystem</h3>
+                            <img src="assets/img/te.svg" class="mt-5" width="100%" alt="">
+                            <p class="mt-5">Software development is the process of designing, coding, testing, and
+                                maintaining
+                                software systems. Discover the key concepts, methodologies, and tools used in the field
+                                of software development.</p>
+                        </center>
+                    </div>
                     <div class="cardCourse">
                         <center><img src="assets/img/te.svg" style="width: 350px;" alt=""></center>
                         <br>
@@ -202,7 +291,7 @@
         <br>
         <div id="portfolio">
             <center>
-                <p style="font-size: 64px;width: 633px;text-align: center;font-weight: 600;line-height: 60px;">An
+                <p class="portfolioHeading">An
                     application for all your business need
                 </p>
             </center>
@@ -210,14 +299,12 @@
             <br>
             <br>
             <div style="width: 90%;margin: auto;">
-
                 <section class="splide" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide" style="width:60%;height: 20px;padding: 20px;">
                                 <div
                                     style="width:100%;height: 100%; background: url(assets/img/etwpad.png);border-radius: 20px; background-size: cover;background-position:top;">
-
                                 </div>
                             </li>
                             <li class="splide__slide" style="width:20%;height: 20px;padding: 20px;">
@@ -250,13 +337,12 @@
             <div id="skills">
                 <div style="width: 90%;margin: auto;">
                     <div class="d-flex" style="justify-content: space-between;">
-                        <p style="font-size: 82px;width: 633px;text-align: left;line-height: 70px; font-weight: 600;">
+                        <p class="skillsHeading">
                             Intergrate with the
                             tools you love
                         </p>
                         <div>
-                            <button class="btn text-white"
-                                style="background: #1A2634;width: 280px;height: 60px;border-radius: 50px;font-size: 25px;">Learn
+                            <button class="btn text-white skillsButton">Learn
                                 More</button>
                         </div>
 
@@ -389,13 +475,13 @@
         </div>
         <div id="footer">
             <div class="container">
-                <div class="d-flex" style="justify-content: space-between;padding: 20px;">
-                    <div class="brand d-flex gap-2" style="flex:1">
+                <div class="d-flex footerContainer" style="justify-content: space-between;padding: 20px;">
+                    <div class="brand d-flex  gap-2" style="flex:1">
                         <img src="assets/img/scode.png" style="width: 50px;height: 50px;" alt="">
 
                         <h4 class="mt-3">STARTCODE</h4>
                     </div>
-                    <div class="main d-flex " style="justify-content: space-evenly;flex:3">
+                    <div class="main d-flex flex-wrap" style="justify-content: space-evenly;flex:3">
                         <div>
                             <h4 style="font-size: 30px;">Services</h4>
                             <ul class="footerUl">
@@ -406,6 +492,7 @@
                         </div>
                         <div>
                             <h4 style="font-size: 30px;">Features</h4>
+
                             <ul class="footerUl">
                                 <li>About Us</li>
                                 <li>Instruction</li>
@@ -414,6 +501,7 @@
                         </div>
                         <div>
                             <h4 style="font-size: 30px;">Company</h4>
+
                             <ul class="footerUl">
                                 <li>Privacy</li>
                                 <li>Terms</li>
@@ -480,12 +568,17 @@
     <script>
         var splide = new Splide('.splide', {
             type: 'loop',
-            perPage: 3,
+            perPage: 2,
             perMove: 1,
             height: '50rem',
             autoWidth: true,
-            cover: false
-
+            cover: false,
+            breakpoints: {
+                600: {
+                    perPage: 1,
+                    autoWidth:false
+                }
+            }
 
         });
 
