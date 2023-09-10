@@ -340,6 +340,58 @@ h1 {
     font-size: 30px;
   }
 
+  .testi1 {
+    grid-area: test1;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .testi2 {
+      grid-area: test2;
+      box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+      
+  }
+  .testi3{
+    grid-area: test3;
+   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  .testi4{
+    grid-area: test4;
+
+   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  .testi5 {
+      grid-area: test5;
+       box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+    
+      
+  }
+
+  .testi6{
+    grid-area: test6;
+   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .grid-container-testi {
+    display: grid;
+    grid-template-areas:  "test1 test3 test5 "
+                            "test2 test4 test6 ";
+    gap: 50px;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .grid-container-testi > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 20px 30px;
+    font-size: 30px;
+  }
+
 @media only screen and (max-width: 600px) {
 .btnPhone {
     display: none !important;
