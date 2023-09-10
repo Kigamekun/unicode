@@ -209,7 +209,7 @@ h1 {
 }
 
 .heroHead {
-    width: 90%;
+    width: 80%;
     margin: auto;
     z-index: 99;
     position: relative;
@@ -279,120 +279,147 @@ h1 {
     margin: auto;
 }
 
-#learn_more{
+#learn_more {
     position: absolute;
-    top: 77%; 
-    left: 50%; 
-    transform: translate(220%, -50%); 
+    top: 77%;
+    left: 50%;
+    transform: translate(220%, -50%);
     text-align: right;
 
 }
 
-.custom-margin{
-    margin-left: 800px; /* Adjust the value as needed */
+.custom-margin {
+    margin-left: 800px;
+    /* Adjust the value as needed */
 }
 
 .service1 {
     grid-area: serv1;
+    border-radius: 7px;
     box-shadow: 4px 4px 4px 5px rgba(0, 0, 0, 0.2);
 
-  }
-  
-  .service2 {
-      grid-area: serv2;
-      box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
 
-      
-  }
-  .service3{
-   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+.service2 {
+    grid-area: serv2;
+    border-radius: 7px;
 
-  }
-  .service4{
-   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
 
-  }
-  .service5 {
-      grid-area: serv5;
-       box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
-    
-      
-  }
 
-  .service6{
-   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
 
-  }
-  
-  .grid-container {
+.service3 {
+    border-radius: 7px;
+
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.service4 {
+    border-radius: 7px;
+
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.service5 {
+    border-radius: 7px;
+
+    grid-area: serv5;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.service6 {
+    border-radius: 7px;
+
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.grid-container {
     display: grid;
-    grid-template-areas:  "serv1 serv3 serv4 serv5"
-                            "serv1 serv2 serv6 serv5";
+    grid-template-areas: "serv1 serv3 serv4 serv5"
+        "serv1 serv2 serv6 serv5";
     gap: 50px;
     background-color: white;
     padding: 10px;
-  }
-  
-  .grid-container > div {
+}
+
+.grid-container>div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: left;
     padding: 20px 30px;
     font-size: 30px;
-  }
+}
 
-  .testi1 {
+.testi1 {
     grid-area: test1;
+    border-radius: 7px;
     box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 
-  }
-  
-  .testi2 {
-      grid-area: test2;
-      box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+}
 
-      
-  }
-  .testi3{
+.testi2 {
+    border-radius: 7px;
+
+    grid-area: test2;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.testi3 {
+    border-radius: 7px;
+
     grid-area: test3;
-   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 
-  }
-  .testi4{
+}
+
+.testi4 {
+    border-radius: 7px;
+
     grid-area: test4;
 
-   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 
-  }
-  .testi5 {
-      grid-area: test5;
-       box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
-    
-      
-  }
+}
 
-  .testi6{
+.testi5 {
+    border-radius: 7px;
+
+    grid-area: test5;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.testi6 {
+    border-radius: 7px;
+
     grid-area: test6;
-   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 
-  }
-  
-  .grid-container-testi {
+}
+
+.grid-container-testi {
     display: grid;
-    grid-template-areas:  "test1 test3 test5 "
-                            "test2 test4 test6 ";
+    grid-template-areas: "test1 test3 test5 "
+        "test2 test4 test6 ";
     gap: 50px;
     background-color: white;
     padding: 10px;
-  }
-  
-  .grid-container-testi > div {
+}
+
+.grid-container-testi>div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: left;
     padding: 20px 30px;
     font-size: 30px;
-  }
-
-@media only screen and (max-width: 600px) {
+}
 .btnPhone {
     display: none !important;
 }
@@ -497,12 +524,12 @@ h1 {
         margin-bottom: 60px;
     }
 
-    #learn_more{
+    #learn_more {
         position: absolute;
-        top: 77%; 
-        left: 50%; 
-        transform: translate(220%, -50%); 
+        top: 77%;
+        left: 50%;
+        transform: translate(220%, -50%);
         text-align: right;
-    
+
     }
 }
