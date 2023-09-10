@@ -33,11 +33,65 @@
 <body>
 
 
+    <div id="phoneNavbar" class="absolute-navbar  " style="width: 100px;height: 400px;background: white;position: fixed;z-index: 99999999;border-radius: 10px;border:2px solid black;top: 25%;margin-left:10px
+    
+    ">
+        <div class="d-flex "
+            style="height: 100%;width: 100%; flex-direction: column;gap: 40px;justify-content: center;align-items: center;">
+            <button class="btn" onclick="closeNavbar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+
+            </button>
+
+            <a href="#app">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-house"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                </svg>
+            </a>
+            <a href="#mainCourseDesktop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-code-slash"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                </svg>
+            </a>
+            <a href="#portfolio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-file-earmark"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                </svg>
+            </a>
+            <a href="#skills">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-gear"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                    <path
+                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                </svg>
+            </a>
+        </div>
+
+    </div>
+
+
     <div id="app">
         <div style="background: url(assets/img/Wave\ BG.svg);background-size: cover;">
 
             <img src="assets/img/stars.svg" id="stars" style="width: 100%;height: 100vh; position: absolute; " alt="">
             <div id="navbar" class="container">
+                <div class="d-flex justify-content-center align-items-center btnPhone">
+                    <button id="buttonNavbar" onclick="openNavbar()" class="btn">
+                        <img src="assets/img/Sort.svg" alt="">
+                    </button>
+                </div>
                 <div class="brand d-flex gap-3">
                     <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
                     <h3 class="mt-3">Startcode</h3>
@@ -505,6 +559,17 @@
         });
 
         splide.mount();
+    </script>
+
+    <script>
+        function closeNavbar() {
+            $('#phoneNavbar').fadeOut(500);
+        }
+
+        function openNavbar() {
+            $('#phoneNavbar').fadeToggle(500);
+
+        }
     </script>
     <script src="assets/js/scripts.js" type="module"></script>
 </body>

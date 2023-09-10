@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
     font-family: 'League Spartan', sans-serif;
     color: #1A2634;
@@ -35,12 +36,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
-    z-index: 2; 
+    position: relative;
+    z-index: 2;
 }
 
 #app {
-    position: relative; 
+    position: relative;
 }
 
 h3 {
@@ -174,7 +175,7 @@ h1 {
     display: block;
 }
 
-.footerUl li{
+.footerUl li {
     list-style: none;
     margin-left: -30px;
 }
@@ -187,7 +188,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1; 
+    z-index: 1;
 }
 
 @keyframes slideUpDown {
@@ -210,7 +211,7 @@ h1 {
 .heroHead {
     width: 90%;
     margin: auto;
-    z-index: 2; 
+    z-index: 99;
     position: relative;
 }
 
@@ -223,6 +224,15 @@ h1 {
     font-size: 32px;
     cursor: pointer;
     z-index: 99;
+}
+
+#buttonNavbar {
+    z-index: 99999;
+}
+
+#phoneNavbar {
+    display: none;
+
 }
 
 
@@ -331,18 +341,30 @@ h1 {
   }
 
 @media only screen and (max-width: 600px) {
+.btnPhone {
+    display: none !important;
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    .btnPhone {
+        display: unset !important;
+        z-index: 99999;
+    }
 
     .mainHero {
         width: 80%;
     }
-    .mainHero h1{
+
+    .mainHero h1 {
         width: 100%;
         margin-bottom: 20px;
         font-size: 40px !important;
     }
 
     .skillsWrapper {
-        justify-content:center;
+        justify-content: center;
         text-align: center;
     }
 
@@ -355,10 +377,10 @@ h1 {
     }
 
 
-    .cardCoursePhone h3{
+    .cardCoursePhone h3 {
         font-size: 25px;
         font-weight: 400;
-    } 
+    }
 
     .buttonStart {
         width: 200px;
