@@ -3,7 +3,7 @@ import Grid from "https://cdn.skypack.dev/@splidejs/splide-extension-grid@0.2.0"
 
 new Splide('#example-grid', {
     type: 'loop', // スライダーの種類 @type: { string }, default: 'slide'
-    height: '20rem', // スライダーの高さ @type: { number }, default: ０
+    height: '13rem', // スライダーの高さ @type: { number }, default: ０
     gap: '1em', // スライド間のギャップサイズ @type: { number|string }, default: ０
     perPage: 4, // 1ページに表示するスライドの数 @type: { number }, default: ０
     perMove: 1, // スライダーが移動するスライドの数 @type: { number }, default: ０
@@ -16,10 +16,10 @@ new Splide('#example-grid', {
     },
     breakpoints: {  // ブレークポイントの定義
         1000: {
-            height: '30rem',
+            height: '10rem',
             perPage: 2,
             grid: {
-                dimensions: [[1, 1], [2, 1], [2, 1], [1, 1]],
+                dimensions: [[1, 1], [1, 1], [1, 1], [1, 1]],
                 gap: {
                 }
             }
