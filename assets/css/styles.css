@@ -32,7 +32,7 @@ body {
 
 
 #hero {
-    height: 715px;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,6 +277,7 @@ h1 {
     width: 60%;
     text-align: center;
     margin: auto;
+    margin-top: 140px;
 }
 
 #learn_more {
