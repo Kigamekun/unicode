@@ -5,6 +5,22 @@ body {
     color: #1A2634;
 }
 
+#navbar {
+    z-index: 99999;
+    transition: background-color 0.3s;
+}
+
+#navbar.sticky {
+    background-color: #fff; /* Warna latar belakang navbar saat sticky */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan saat sticky */
+    position: fixed; /* Mengatur posisi navbar menjadi fixed saat sticky */
+    top: 0; /* Mengatur navbar di bagian atas layar saat sticky */
+    width: 100%;
+    color: black !important;
+    max-width: unset; /* Mengatur lebar navbar saat sticky */
+  }
+
+  
 #navbarContainer .container {
     display: flex;
     justify-content: space-between;
@@ -295,7 +311,7 @@ h1 {
 .service1 {
     grid-area: serv1;
     border-radius: 7px;
-    box-shadow: 4px 4px 4px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
 }
 
@@ -303,7 +319,7 @@ h1 {
     grid-area: serv2;
     border-radius: 7px;
 
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
 
 }
@@ -311,14 +327,14 @@ h1 {
 .service3 {
     border-radius: 7px;
 
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
 }
 
 .service4 {
     border-radius: 7px;
 
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
 }
 
@@ -326,7 +342,7 @@ h1 {
     border-radius: 7px;
 
     grid-area: serv5;
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
 
 }
@@ -334,7 +350,7 @@ h1 {
 .service6 {
     border-radius: 7px;
 
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
 }
 
@@ -424,6 +440,13 @@ h1 {
 }
 
 @media only screen and (max-width: 1000px) {
+
+    .cardPower {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+    }
+    .getInTouchWrapper {
+        flex-direction: column;
+    }
 
     .grid-container {
         display: flex;
@@ -515,7 +538,7 @@ h1 {
 
     .skillsHeading {
         width: 70%;
-        font-size: 32px;
+        font-size: 28px;
         text-align: center;
     }
 
