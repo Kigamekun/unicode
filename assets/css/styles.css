@@ -50,7 +50,7 @@ body {
 
 
 #hero {
-    height: 800px;
+    height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +223,7 @@ h1 {
 }
 
 .heroHead {
-    width: 90%;
+    width: 75%;
     margin: auto;
     z-index: 99;
     position: relative;
