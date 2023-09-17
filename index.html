@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/vendor/slick/slick-theme.css">
     <meta property="og:image:url" itemprop="image" content="assets/img/scode.svg" />
     <meta property="og:image:type" content="image/png" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico" />
     <!--===============================================================================================-->
@@ -69,46 +71,56 @@
 
 
     <div id="phoneNavbar" class="absolute-navbar"
-        style="width: 100px;height: 400px;background: white;position: fixed;z-index: 99999999;border-radius: 10px;border:2px solid black;top: 25%;margin-left:10px">
+        style="width: 100px;height: 500px;background: white;position: fixed;z-index: 99999999;border-radius: 10px;border:2px solid black;top: 25%;margin-left:10px">
         <div class="d-flex "
             style="height: 100%;width: 100%; flex-direction: column;gap: 40px;justify-content: center;align-items: center;">
             <button class="btn" onclick="closeNavbar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-x"
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-x"
                     viewBox="0 0 16 16">
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                 </svg>
             </button>
             <a href="#app">
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-house"
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-house"
                     viewBox="0 0 16 16">
                     <path
                         d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
                 </svg>
             </a>
-            <a href="#mainCourseDesktop">
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-code-slash"
+            <button onclick="scrollToElement('client')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-people-fill"
                     viewBox="0 0 16 16">
                     <path
-                        d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                 </svg>
-            </a>
-            <a href="#portfolio">
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-file-earmark"
+            </button>
+            <button onclick="scrollToElement('noWherePower')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-building"
                     viewBox="0 0 16 16">
                     <path
-                        d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                        d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z" />
+                    <path
+                        d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z" />
                 </svg>
-            </a>
-            <a href="#skills">
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black" class="bi bi-gear"
+            </button>
+            <button onclick="scrollToElement('portfolio')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-archive"
                     viewBox="0 0 16 16">
                     <path
-                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
-                    <path
-                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                        d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
                 </svg>
-            </a>
+            </button>
+            <button onclick="scrollToElement('skills')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-braces" viewBox="0 0 16 16">
+                    <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"/>
+                  </svg>
+            </button>
+            <button onclick="scrollToElement('getInTouch')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                  </svg>
+            </button>
         </div>
     </div>
 
@@ -123,8 +135,13 @@
                 alt="">
             <div id="navbar" class="container">
                 <div class="d-flex justify-content-center align-items-center btnPhone">
-                    <button id="buttonNavbar" onclick="openNavbar()" class="btn">
-                        <img src="assets/img/Sort.svg" alt="">
+                    <button id="buttonNavbar" onclick="openNavbar()" class="btn d-flex mt-3"
+                        style="align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white"
+                            class="bi bi-filter-left" viewBox="0 0 16 16">
+                            <path
+                                d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
                     </button>
                 </div>
                 <div class="brand d-flex gap-3">
@@ -134,11 +151,16 @@
                 <div class="menu" style="z-index: 999999;">
                     <ul>
                         <li style="color:white"><a href="#app" class="link">Home</a></li>
-                        <li style="color:white"><button onclick="scrollToElement('client')" class="link">Client</button></li>
-                        <li style="color:white"><button onclick="scrollToElement('noWherePower')" class="link">Our Business</button></li>
-                        <li style="color:white"><button onclick="scrollToElement('portfolio')" class="link">Portfolio</button></li>
-                        <li style="color:white"><button onclick="scrollToElement('skills')" class="link">Service</button></li>
-                        <li style="color:white"><button onclick="scrollToElement('getInTouch')" class="link">Contact Us</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('client')" class="link">Client</button>
+                        </li>
+                        <li style="color:white"><button onclick="scrollToElement('noWherePower')" class="link">Our
+                                Business</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('portfolio')"
+                                class="link">Portfolio</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('skills')"
+                                class="link">Service</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('getInTouch')" class="link">Contact
+                                Us</button></li>
                     </ul>
                 </div>
             </div>
@@ -152,8 +174,8 @@
 
                     <!-- <p style="color: white;">Make your business path through the world, with the help of technology at
                         <span style="color: white;">StartCode</span>.</p> -->
-                        <p style="color: white;">Transform and accelerate the growth of your digital business with 
-                            <span style="color: #6668f5;">StartCode</span>.</p>
+                    <p style="color: white;">Transform and accelerate the growth of your digital business with
+                        <span style="color: #6668f5;">StartCode</span>.</p>
                     <!-- <button class="btn mt-5 buttonStart">Check Our Services</button> -->
                 </div>
             </div>
@@ -395,7 +417,8 @@
                                         style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
                                         <img src="assets/img/vectorReviewJumbotron.png" style="width: 50px;" alt="">
                                         <h5>Ajat</h5>
-                                        <p>nice team! kerjanya sangat luar biasa cepat dan bertanggung jawab. desainnya juga gaul banget</p>
+                                        <p>nice team! kerjanya sangat luar biasa cepat dan bertanggung jawab. desainnya
+                                            juga gaul banget</p>
                                     </div>
                                 </li>
                                 <li class="splide__slide"
@@ -413,7 +436,9 @@
                                         style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
                                         <img src="assets/img/nini.jpeg" style="width: 50px;border-radius: 50%;" alt="">
                                         <h5>Nini Trianti</h5>
-                                        <p>Excellent service! They did everything fast, and efficient, the communication was good and clear even though we only communicated via chat, recommended!</p>
+                                        <p>Excellent service! They did everything fast, and efficient, the communication
+                                            was good and clear even though we only communicated via chat, recommended!
+                                        </p>
                                     </div>
                                 </li>
 
@@ -515,9 +540,12 @@
                                 <h4 style="font-size: 20px;font-weight: 500;">Web</h4>
                                 <h4 style="font-size: 20px;font-weight: 500;">Application</h4>
                                 <p style="font-size: 15px;">
-                                    Join Us on a Journey to Digital Success with Our Extensive Range of Personalized Web Application Services, 
-                                    Thoughtfully Designed to Elevate Your Online Presence, Boost Operational Efficiency, Nurture Growth, 
-                                    and Create a Legacy of Achievements, All Fueled by Our Passion for Delivering Top-Notch Solutions and Supporting 
+                                    Join Us on a Journey to Digital Success with Our Extensive Range of Personalized Web
+                                    Application Services,
+                                    Thoughtfully Designed to Elevate Your Online Presence, Boost Operational Efficiency,
+                                    Nurture Growth,
+                                    and Create a Legacy of Achievements, All Fueled by Our Passion for Delivering
+                                    Top-Notch Solutions and Supporting
                                     You in Your Exciting Digital Ventures.</p>
                             </div>
                         </div>
@@ -531,8 +559,10 @@
 
                             <div class="mt-1">
                                 <h4 style="font-size: 20px;font-weight: 500;">Machine Learning</h4>
-                                <p style="font-size: 15px;">Delve into the Realm of Machine Learning with Our Tailored Services, Enhancing Data Insights, Boosting Efficiency, 
-                                    and Nurturing Growth, Supported by Our Commitment to Innovative Solutions and Your Path to Success.</p>
+                                <p style="font-size: 15px;">Delve into the Realm of Machine Learning with Our Tailored
+                                    Services, Enhancing Data Insights, Boosting Efficiency,
+                                    and Nurturing Growth, Supported by Our Commitment to Innovative Solutions and Your
+                                    Path to Success.</p>
                             </div>
                         </div>
                     </div>
@@ -544,8 +574,10 @@
 
                             <div class="mt-1">
                                 <h4 style="font-size: 20px;font-weight: 500;">Front-End</h4>
-                                <p style="font-size: 15px;">Embark on a Journey into Front-End Excellence with Our Specialized Services, Elevating User Experience,
-                                     Crafting Innovative Solutions, and Paving the Way for Your Success through Effective Design. </p>
+                                <p style="font-size: 15px;">Embark on a Journey into Front-End Excellence with Our
+                                    Specialized Services, Elevating User Experience,
+                                    Crafting Innovative Solutions, and Paving the Way for Your Success through Effective
+                                    Design. </p>
                             </div>
                         </div>
                     </div>
@@ -557,8 +589,10 @@
 
                             <div class="mt-1">
                                 <h4 style="font-size: 20px;font-weight: 500;">UI/UX Design</h4>
-                                <p style="font-size: 15px;">Immerse Yourself in UI/UX Mastery with Our Specialized Services, 
-                                    Focused on Elevating User Experience, Crafting Innovative Designs, and Paving the Path to Your Success in User-Centric Solutions.</p>
+                                <p style="font-size: 15px;">Immerse Yourself in UI/UX Mastery with Our Specialized
+                                    Services,
+                                    Focused on Elevating User Experience, Crafting Innovative Designs, and Paving the
+                                    Path to Your Success in User-Centric Solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -572,10 +606,14 @@
                                 <h4 style="font-size: 20px;font-weight: 500;">Mobile</h4>
                                 <h4 style="font-size: 20px;font-weight: 500;">Application</h4>
                                 <p style="font-size: 15px;">
-                                    Embark on an Exciting Journey to Mobile Excellence with Our Diverse Portfolio of Tailored Mobile Application Services, 
-                                    Creatively Designed to Enhance Your Mobile Presence, Streamline Operational Efficiency, Cultivate Sustainable Growth, 
-                                    and Establish a Legacy of Remarkable Achievements. Our Unwavering Passion for Delivering Top-Quality Solutions and Providing 
-                                    Full Support in Your Thrilling Mobile Ventures Powers Your Path to Digital Triumph.</p>
+                                    Embark on an Exciting Journey to Mobile Excellence with Our Diverse Portfolio of
+                                    Tailored Mobile Application Services,
+                                    Creatively Designed to Enhance Your Mobile Presence, Streamline Operational
+                                    Efficiency, Cultivate Sustainable Growth,
+                                    and Establish a Legacy of Remarkable Achievements. Our Unwavering Passion for
+                                    Delivering Top-Quality Solutions and Providing
+                                    Full Support in Your Thrilling Mobile Ventures Powers Your Path to Digital Triumph.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -587,8 +625,10 @@
 
                             <div class="mt-1">
                                 <h4 style="font-size: 20px;font-weight: 500;">Back-End</h4>
-                                <p style="font-size: 15px;">Experience Back-End Excellence with Our Tailored Back-End Service, Uplifting Functionality, Maximizing Efficiency, 
-                                    and Cultivating Growth, Empowered by Our Dedication to Pioneering Solutions and Enabling Your Journey to Triumph.</p>
+                                <p style="font-size: 15px;">Experience Back-End Excellence with Our Tailored Back-End
+                                    Service, Uplifting Functionality, Maximizing Efficiency,
+                                    and Cultivating Growth, Empowered by Our Dedication to Pioneering Solutions and
+                                    Enabling Your Journey to Triumph.</p>
                             </div>
                         </div>
                     </div>
@@ -605,7 +645,8 @@
             <div class="d-flex getInTouchWrapper" style="width: 80%;margin: auto;gap: 150px;justify-content: center;">
                 <div style="flex:3;">
                     <h3>Get in touch with us</h3>
-                    <p>Reach Out and Connect with StartCode, Let's Collaborate, Answer Your Questions, and Support Your Journey to Success!</p>
+                    <p>Reach Out and Connect with StartCode, Let's Collaborate, Answer Your Questions, and Support Your
+                        Journey to Success!</p>
                 </div>
 
                 <form style="flex: 4;" class="contact1-form validate-form" name="contact" data-netlify="true"
