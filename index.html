@@ -71,9 +71,9 @@
 
 
     <div id="phoneNavbar" class="absolute-navbar"
-        style="width: 100px;height: 500px;background: white;position: fixed;z-index: 99999999;border-radius: 10px;border:2px solid black;top: 25%;margin-left:10px">
+        style="width: 100px;height: 500px;background: white;position: fixed;;z-index: 99999999;border-radius: 10px;border:2px solid black;top: 25%;margin-left:10px">
         <div class="d-flex "
-            style="height: 100%;width: 100%; flex-direction: column;gap: 40px;justify-content: center;align-items: center;">
+            style="height: 100%;width: 100%; flex-direction: column;gap:10px;justify-content: center;align-items: center;">
             <button class="btn" onclick="closeNavbar()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-x"
                     viewBox="0 0 16 16">
@@ -87,14 +87,20 @@
                     <path
                         d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
                 </svg>
+
             </a>
+            <center>Home</center>
+
             <button onclick="scrollToElement('client')" class="link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-people-fill"
                     viewBox="0 0 16 16">
                     <path
                         d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                 </svg>
+
             </button>
+            <center>Client</center>
+
             <button onclick="scrollToElement('noWherePower')" class="link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-building"
                     viewBox="0 0 16 16">
@@ -103,24 +109,35 @@
                     <path
                         d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z" />
                 </svg>
+
             </button>
+            <center>Objective</center>
             <button onclick="scrollToElement('portfolio')" class="link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-archive"
                     viewBox="0 0 16 16">
                     <path
                         d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
                 </svg>
+
             </button>
+            <center>Portfolio</center>
             <button onclick="scrollToElement('skills')" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-braces" viewBox="0 0 16 16">
-                    <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-braces"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z" />
+                </svg>
+
             </button>
+            <center>Tech Stack</center>
             <button onclick="scrollToElement('getInTouch')" class="link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
+                    class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                </svg>
             </button>
+            <center>Contact Us</center>
         </div>
     </div>
 
@@ -134,16 +151,7 @@
             <img src="assets/img/Satrs.svg" id="stars" style="width: 100%;height: 100vh; position: absolute;top:-40px; "
                 alt="">
             <div id="navbar" class="container">
-                <div class="d-flex justify-content-center align-items-center btnPhone">
-                    <button id="buttonNavbar" onclick="openNavbar()" class="btn d-flex mt-3"
-                        style="align-items: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white"
-                            class="bi bi-filter-left" viewBox="0 0 16 16">
-                            <path
-                                d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                        </svg>
-                    </button>
-                </div>
+
                 <div class="brand d-flex gap-3">
                     <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
                     <h3 style="color:white" class="mt-3">Startcode</h3>
@@ -162,6 +170,18 @@
                         <li style="color:white"><button onclick="scrollToElement('getInTouch')" class="link">Contact
                                 Us</button></li>
                     </ul>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center btnPhone">
+                    <button id="buttonNavbar" onclick="openNavbar()" class="btn d-flex mt-3"
+                        style="align-items: center;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white" class="bi bi-list"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 

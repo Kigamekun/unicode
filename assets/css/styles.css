@@ -700,7 +700,15 @@ h1 {
 
     .brand {
         width: 100%;
-        justify-content: center;
+        /* justify-content: center; */
+
+    }
+
+    #stars {
+        display: none;
+    }
+    #navbar {
+        width : 90% !important;
     }
 
     .skillsHeading {
