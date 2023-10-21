@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    color: #1C2025;
+}
+
+#navbar {
+    z-index: 99999;
+    transition: background-color 0.3s;
+}
+
+#navbar.sticky {
+    background-color: #fff;
+    /* Warna latar belakang navbar saat sticky */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan saat sticky */
+    position: fixed;
+    /* Mengatur posisi navbar menjadi fixed saat sticky */
+    top: 0;
+    /* Mengatur navbar di bagian atas layar saat sticky */
+    width: 100%;
+    color: black !important;
+    max-width: unset;
+    /* Mengatur lebar navbar saat sticky */
+}
+
+
+#navbarContainer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbarContainer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbarContainer .container .menu {
+    display: flex;
+    align-items: center;
+}
+
+#navbarContainer .container .menu .wrapperMenu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* class="splide__slide splide__slide--clone is-active" */
+
+
+
+
+
+#hero {
+    height: 1000px;
+    
+    position: relative;
+    z-index: 2;
+}
+
+#heroContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+#app {
+    position: relative;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+.slick-active {
+    width: 500px !important;
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#navbar .brand {
+    display: flex;
+    margin-top: 20px;
+
+    align-items: center;
+
+}
+
+
+#navbar .menu {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+#navbar .menu ul {
+    list-style: none;
+
+}
+
+#navbar .menu ul li {
+    margin-left: 20px;
+    display: inline-block;
+
+}
+
+/* .is-active {
+    width: 600px !important;
+} */
+
+
+.p-example__body {
+    overflow: hidden;
+    color: #333;
+}
+
+.p-example__splide {
+    padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .p-example__splide {
+        padding: 4rem;
+    }
+}
+
+.p-splide__slide {
+    position: relative;
+    color: #1A2634;
+    border-radius: 0.5rem;
+    /* border: 3px solid #eef5ae; */
+    /* border: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12)); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+    /* background: #dceb5d; */
+    overflow: visible;
+    line-height: 1.5;
+    padding: 10px;
+    transition: border-color 0.15s cubic-bezier(0.54, 0.01, 0.1, 1), background-color 0.15s cubic-bezier(0.54, 0.01, 0.1, 1);
+}
+
+.p-splide__slide-number {
+    position: absolute;
+    bottom: 0.15em;
+    left: 0.5rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.7rem;
+    line-height: 0.75;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .p-splide__slide-number {
+        left: 1rem;
+        font-size: 3.2rem;
+    }
+}
+
+
+.splide__slide {
+    padding-top: 17px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    padding-bottom: 17px !important;
+}
+
+.splide__pagination {
+    bottom: -2.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.splide__pagination__page {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* background: #93a313; */
+    margin: 0.4em;
+    cursor: pointer;
+    display: none;
+}
+
+.footerUl li {
+    list-style: none;
+    margin-left: -30px;
+}
+
+
+#stars {
+    animation: slideUpDown 3s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(-10px);
+        /* Posisi awal di atas */
+    }
+
+    50% {
+        transform: translateY(10px);
+        /* Posisi tengah di bawah */
+    }
+
+    100% {
+        transform: translateY(-10px);
+        /* Kembali ke posisi atas */
+    }
+}
+
+.heroHead {
+    width: 100%;
+    margin: auto;
+    z-index: 99;
+    position: relative;
+}
+
+.buttonStart {
+    width: 335px;
+    height: 60px;
+    background: #1A2634;
+    color: white;
+    border-radius: 30px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#buttonNavbar {
+    z-index: 99999;
+}
+
+#phoneNavbar {
+    display: none;
+
+}
+
+
+.mainCourseWrapper {
+    width: 90%;
+    margin: auto;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.cardCoursePhone {
+    display: none;
+}
+
+.portfolioHeading {
+    font-size: 44px;
+    width: 633px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.skillsHeading {
+
+    font-size: 64px;
+    width: 703px;
+    text-align: left;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.skillsButton {
+    background: #1A2634;
+    width: 280px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+
+.mainHero {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 140px;
+}
+
+#learn_more {
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translate(220%, -50%);
+    text-align: right;
+
+}
+
+.custom-margin {
+    margin-left: 800px;
+    /* Adjust the value as needed */
+}
+
+.service1 {
+    grid-area: serv1;
+    border-radius: 7px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+.service2 {
+    grid-area: serv2;
+    border-radius: 7px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+
+}
+
+.service3 {
+    border-radius: 7px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+.service4 {
+    border-radius: 7px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+.service5 {
+    border-radius: 7px;
+
+    grid-area: serv5;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+
+}
+
+.service6 {
+    border-radius: 7px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "serv1 serv3 serv4 serv5"
+        "serv1 serv2 serv6 serv5";
+    gap: 50px;
+    background-color: white;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 20px 30px;
+    font-size: 30px;
+}
+
+.testi1 {
+    grid-area: test1;
+    border-radius: 7px;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.testi2 {
+    border-radius: 7px;
+
+    grid-area: test2;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.testi3 {
+    border-radius: 7px;
+
+    grid-area: test3;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.testi4 {
+    border-radius: 7px;
+
+    grid-area: test4;
+
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.testi5 {
+    border-radius: 7px;
+
+    grid-area: test5;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.testi6 {
+    border-radius: 7px;
+
+    grid-area: test6;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.grid-container-testi {
+    display: grid;
+    grid-template-areas: "test1 test3 test5 "
+        "test2 test4 test6 ";
+    gap: 50px;
+    background-color: white;
+    padding: 10px;
+}
+
+.grid-container-testi>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 20px 30px;
+    font-size: 30px;
+}
+
+.btnPhone {
+    display: none !important;
+}
+
+#noWherePower {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    position: relative;
+}
+
+.powerWrapper {
+    position: relative;
+    margin-top: 250px;
+}
+
+.link {
+    transition: .3s;
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    opacity: .5;
+    color: white;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border-radius: 50%;
+    border: 2px solid #1A2634;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    transition: 1s;
+}
+
+#myBtn:hover {
+    background-color: rgba(255, 255, 255, 70%);
+    bottom: 40px;
+
+    /* Add a dark-grey background on hover */
+}
+
+
+#testimoni {
+    padding: 7rem 0;
+}
+
+#testimoni .container {
+    position: relative;
+}
+
+#testimoni .container .titleSection {
+    text-align: center;
+    color: #4B4D4C;
+}
+
+#testimoni .container .wrapperTestimoni {
+    display: flex;
+}
+
+#testimoni .container .wrapperTestimoni .testimoni {
+    text-align: center;
+    width: 100%;
+
+}
+
+#testimoni .container .wrapperTestimoni .testimoni .avatarTestimoni {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#testimoni .container .wrapperTestimoni .testimoni .avatarTestimoni img {
+    width: 100%;
+    max-width: 64px;
+    max-height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#testimoni .container .wrapperTestimoni .testimoni .comment p {
+    color: #4E5462;
+
+}
+
+#testimoni .container .wrapperTestimoni .testimoni .name {
+    color: #1A2634;
+}
+
+#testimoni .container .slick-slider-dots {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    width: 10%;
+}
+
+#testimoni .container .slick-slider-dots ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#testimoni .container .slick-slider-dots ul li {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimoni .container .slick-slider-dots ul li button {
+    background: #C4C4C4;
+    height: 8px;
+    width: 8px;
+    overflow: hidden;
+    color: #C4C4C4;
+    border: none;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+#testimoni .container .slick-slider-dots ul li button::before {
+    display: none;
+}
+
+#testimoni .container .slick-slider-dots ul li.slick-active button {
+    background: #5E4BF5;
+    color: #5E4BF5;
+    width: 28px;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    #noWherePower {
+        background: #1A2634;
+
+
+    }
+
+
+    .powerWrapper {
+        position: relative;
+        margin-top: 10px !important;
+    }
+
+    #noWherePower h3 {
+        width: 100% !important;
+    }
+
+    #app {
+        overflow-x: hidden;
+    }
+
+    .cardPower {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .getInTouchWrapper {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .grid-container-testi {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btnPhone {
+        display: unset !important;
+        z-index: 99999;
+    }
+
+    .mainHero {
+        width: 80%;
+    }
+
+    .mainHero h1 {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 40px !important;
+    }
+
+    .skillsWrapper {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .heroHead {
+        font-size: 30px !important;
+    }
+
+    .cardCoursePhone {
+        display: block;
+    }
+
+
+    .cardCoursePhone h3 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .buttonStart {
+        width: 200px;
+        font-size: 15px;
+
+    }
+
+    .portfolioHeading {
+        font-size: 30px;
+        width: 70%;
+        text-align: center;
+        font-weight: 600;
+        line-height: 60px;
+    }
+
+    .mainCourseDesktop {
+        display: none !important;
+    }
+
+    .mainCourseFotoDesktop {
+        display: none;
+    }
+
+    .cardCourse {
+        display: none;
+    }
+
+    .mainCourseWrapper {
+        flex-direction: column;
+    }
+
+    .menu,
+    .menu ul,
+    .menu ul li {
+        display: none;
+    }
+
+    .brand {
+        width: 100%;
+        /* justify-content: center; */
+
+    }
+
+    #stars {
+        display: none;
+    }
+    #navbar {
+        width : 90% !important;
+    }
+
+    .skillsHeading {
+        width: 70%;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .skillsButton {
+        display: none;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+    }
+
+    .footerContainer .main {
+        flex-direction: column;
+    }
+
+    .footerContainer .brand {
+        margin-bottom: 60px;
+    }
+
+    #learn_more {
+        position: absolute;
+        top: 77%;
+        left: 50%;
+        transform: translate(220%, -50%);
+        text-align: right;
+
+    }
+}
