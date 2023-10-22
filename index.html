@@ -18,6 +18,7 @@
     <meta property="og:image:url" itemprop="image" content="assets/img/scode.svg" />
     <meta property="og:image:type" content="image/png" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico" />
@@ -47,7 +48,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Link to the file hosted on your server, -->
     <link rel="stylesheet" href="assets/vendor/splide-4.1.3/dist/css/splide.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/stylesv2.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
         function sendEmail() {
@@ -65,6 +66,372 @@
                 });
         }
     </script>
+
+    <style>
+        /* vars */
+        .checked {
+            color: orange;
+        }
+
+        .contactUs {
+            --border-width: 2px;
+            --border-radius: 22px;
+            --color-1: #FFFFFF;
+            --color-2: #9C6DFF;
+
+
+        }
+
+        /* code */
+
+        .contactUs {
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ddd;
+            position: relative;
+            background: linear-gradient(to right, #FFFFFF, #9C6DFF),
+                linear-gradient(to right, #FFFFFF, #9C6DFF);
+            background-position: var(--border-radius) 0, var(--border-radius) 100%;
+            background-repeat: no-repeat;
+            background-size: calc(100% - var(--border-radius) - var(--border-radius)) var(--border-width);
+            padding: 14px 24px;
+            border-radius: var(--border-radius);
+            border: none;
+            z-index: 999999;
+        }
+
+        .contactUs:before,
+        .contactUs:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: var(--border-radius);
+            top: 0;
+            bottom: 0;
+        }
+
+        .contactUs:before {
+            left: 0;
+            border: var(--border-width) solid var(--color-1);
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+            border-right-color: transparent;
+        }
+
+        .contactUs:after {
+            right: 0;
+            border: var(--border-width) solid var(--color-2);
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            border-left-color: transparent;
+        }
+
+
+
+
+        .searchbox-wrap {
+            display: flex;
+            width: 500px;
+            height: 60px;
+            margin-top: 8%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .searchbox-wrap input {
+            flex: 1;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            -webkit-border-top-left-radius: 25px;
+            -webkit-border-bottom-left-radius: 25px;
+            -moz-border-radius-topleft: 25px;
+            -moz-border-radius-bottomleft: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            box-shadow: none;
+            border: none;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
+        }
+
+        .searchbox-wrap button {
+            padding-right: 10px;
+            background-color: #fff;
+            -webkit-border-top-right-radius: 25px;
+            -webkit-border-bottom-right-radius: 25px;
+            -moz-border-radius-topright: 25px;
+            -moz-border-radius-bottomright: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.19);
+            border: none;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .searchbox-wrap button span {
+            margin-left: 50px;
+            padding: 16px 45px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: #fff;
+            background-color: #5E4BF5;
+            border-radius: 20px;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
+        }
+
+        .searchbox-wrap button span:hover {
+            background-color: #5140d3;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.19);
+        }
+
+
+
+
+        .wrapper {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .item-wrapper {
+            position: relative;
+            margin-bottom: 0.3rem;
+            border-radius: 25px;
+            box-shadow: 3px 3px 10px #0002;
+            background-color: #323232;
+            transition: all 0.3s;
+            overflow: hidden;
+            padding: 20px;
+            z-index: 1;
+            width: 25rem;
+            color: white;
+        }
+
+        .item-wrapper:before {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            right: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            z-index: -1;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        .item-wrapper.active:before {
+            transform: scale(8);
+            filter: blur(8px);
+        }
+
+        .item-wrapper.active .item-title {
+            text-decoration: underline;
+        }
+
+        .item-wrapper.active .item-title:hover {
+            transform: none;
+        }
+
+        .item-title {
+            padding: 0.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .item-title:hover {
+            transform: translateX(1%);
+        }
+
+        .content-outer {
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .content {
+            padding: 0.2rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-slider {
+            padding: 2em 2em 3em;
+        }
+
+        .testimonial-title {
+            color: #fff;
+        }
+
+        .testimonial-title h2 {
+            padding-left: 0.2em;
+        }
+
+        .card {
+            margin: 0 0.5em;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            border: none;
+            height: 100%;
+            width: 800px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #fff;
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+        @media (min-width: 576px) {
+            .carousel-item {
+                margin-right: 0;
+                flex: 0 0 50%;
+                display: block;
+            }
+
+            .carousel-inner {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .carousel-inner {
+                padding: 1em;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                opacity: 1;
+                position: absolute;
+                left: 1em;
+                top: 90%;
+                box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+                top: -13em;
+
+                transform: translateY(-50%);
+            }
+
+            .carousel-control-next {
+                left: 98em;
+            }
+        }
+
+
+        .section {
+            padding: 30px 0;
+            color: #333;
+        }
+
+        .section .top-side {
+            text-align: center;
+        }
+
+        .section .top-side .title {
+            font-weight: 500;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        .section .top-side .title:after {
+            content: "";
+            display: block;
+            width: 50%;
+            border-bottom: 1px solid #494949;
+            margin: 8px auto;
+        }
+
+        .section .top-side h2 {
+            font-weight: 700;
+        }
+
+        .section.portfolio .filters {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .section.portfolio .filters ul {
+            padding: 0;
+        }
+
+        .section.portfolio .filters ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 20px 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .section.portfolio .filters ul li:after {
+            content: "";
+            display: block;
+            width: calc(0% - 60px);
+            position: absolute;
+            height: 2px;
+            background: #333;
+            transition: width 350ms ease-out;
+        }
+
+        .section.portfolio .filters ul li:hover:after {
+            width: calc(100% - 60px);
+            transition: width 350ms ease-out;
+        }
+
+        .section.portfolio .filters ul li.active:after {
+            width: calc(100% - 60px);
+        }
+
+        .section.portfolio .filters-content {
+            margin-top: 50px;
+        }
+
+        .section.portfolio .filters-content .show {
+            opacity: 1;
+            visibility: visible;
+            transition: all 350ms;
+        }
+
+        .section.portfolio .filters-content .hide {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 350ms;
+        }
+
+        .section.portfolio .filters-content .item {
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .section.portfolio .filters-content .item .p-inner {
+            padding: 20px 30px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .section.portfolio .filters-content .item .p-inner h5 {
+            font-size: 15px;
+        }
+
+        .section.portfolio .filters-content .item .p-inner .cat {
+            font-size: 13px;
+        }
+
+        .section.portfolio .filters-content .item img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -146,18 +513,18 @@
 
     <div id="app">
 
-        <div style="background: url(assets/img/Wave\ BG.svg);background-size: cover;margin-top: -10px;">
+        <div style="background: #1C2025;background-size: cover;margin-top: -10px;">
 
-            <img src="assets/img/Satrs.svg" id="stars" style="width: 100%;height: 100vh; position: absolute;top:-40px; "
-                alt="">
+            <img src="assets/img/Satrsv2.svg" id="stars"
+                style="width: 100%;height: 100vh; position: absolute;top:-100px; " alt="">
             <div id="navbar" class="container">
 
-                <div class="brand d-flex gap-3">
+                <div class="brand d-flex gap-3 " style="flex: 1;">
                     <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
                     <h3 style="color:white" class="mt-3">Startcode</h3>
                 </div>
-                <div class="menu" style="z-index: 999999;">
-                    <ul>
+                <div class="menu d-flex justify-content-center " style="align-items: center; flex: 3;z-index: 999999;">
+                    <ul class="mt-4">
                         <li style="color:white"><a href="#app" class="link">Home</a></li>
                         <li style="color:white"><button onclick="scrollToElement('client')" class="link">Client</button>
                         </li>
@@ -168,622 +535,735 @@
                         <li style="color:white"><button onclick="scrollToElement('skills')"
                                 class="link">Service</button></li>
                         <li style="color:white"><button onclick="scrollToElement('getInTouch')" class="link">Contact
-                                </button></li>
-                        <li style="color:white"><button onclick="window.location.href='https://wa.me/6285280044559';" class="btn btn-success link">Contact Us</button></li>
+                            </button></li>
+
                     </ul>
                 </div>
 
-                <div class="d-flex justify-content-center align-items-center btnPhone">
-                    <button id="buttonNavbar" onclick="openNavbar()" class="btn d-flex mt-3"
-                        style="align-items: center;">
+                <div style="flex: 1; justify-content: flex-end;display: flex;">
+                    <button onclick="window.location.href='https://wa.me/6285280044559';"
+                        class="contactUs link mt-4">Contact Us</button>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white" class="bi bi-list"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                        </svg>
-                    </button>
                 </div>
+
             </div>
 
 
             <!-- HERO -->
             <div id="hero">
-                <div class="mainHero">
-                    <!-- <h1 style="color:white ;font-weight: 600;" class="heroHead">Adapt with Technology Solution</h1> -->
-                    <h1 style="color:white ;font-weight: 600;" class="heroHead">Revolutionize Your Digital World</h1>
+                <div id="heroContent">
+                    <div class="mainHero">
+                        <!-- <h1 style="color:white ;font-weight: 600;" class="heroHead">Adapt with Technology Solution</h1> -->
+                        <h1 style="color:white ;font-weight: 600;" class="heroHead">Revolutionize Your Digital World
+                        </h1>
 
-                    <!-- <p style="color: white;">Make your business path through the world, with the help of technology at
+                        <!-- <p style="color: white;">Make your business path through the world, with the help of technology at
                         <span style="color: white;">StartCode</span>.</p> -->
-                    <p style="color: white;">Transform and accelerate the growth of your digital business with
-                        <span style="color: #6668f5;">StartCode</span>.</p>
-                    <!-- <button class="btn mt-5 buttonStart">Check Our Services</button> -->
+                        <p style="color: white;">Transform and accelerate the growth of your digital business with
+                            <span style="color: #6668f5;">StartCode</span>.</p>
+                        <div class="searchbox-wrap">
+                            <input type="text" placeholder="Search for something...">
+                            <button><span>Get Started</span> </button>
+                        </div>
+
+
+                        <!-- <button class="btn mt-5 buttonStart">Check Our Services</button> -->
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div id="cl" class="d-flex" style="height:100px;width: 95%;margin: auto;">
+                    <div style="flex:5;border-left:6px solid #5E4BF5;display: flex;align-items: center;">
+                        <p
+                            style="color: white;font-size: 48px;margin-top: 1rem; font-weight: 500;width: 20rem; margin-left: 70px;">
+                            Meet our
+                            featured clients
+                        </p>
+
+                    </div>
+                    <div style="flex:9;display: flex;justify-content: start;flex-wrap: wrap;gap:20px;">
+                        <div class="text-white">
+                            <img src="assets/img/bonet-new.png" style="width: 36px;height: 36px;margin-right: 10px;"
+                                alt="">
+                            PT Bonet Utama
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/plantsasriLogo.png" style="height: 36px;margin-right: 10px;" alt="">
+                            Plantsasri
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/logo-bkad.png" style="width: 36px;height: 36px;margin-right: 10px;"
+                                alt="">
+                            BKAD Kota Bogor
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/logosmkn3.png" style="width: 36px;height: 36px;margin-right: 10px;"
+                                alt="">
+                            SMKN 3 Kota Bogor
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/tni.png" style="width: 36px;height: 36px;margin-right: 10px;" alt="">
+                            TNI AD
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/smkn4.svg" style="width: 36px;height: 36px;margin-right: 10px;" alt="">
+                            SMKN 4 Kota Bogor
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/moodprimalogo.png" style="width: 36px;height: 36px;margin-right: 10px;"
+                                alt="">
+                            PT Moodprima
+                        </div>
+                        <div class="text-white d-flex align-items-center" style="color: gold;">
+                            PT Buana Niaga Lestari
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
         </div>
 
 
 
 
+        <div id="about" style="margin-top: -300px;background: url('assets/img/wave\ wht.svg');background-size: cover;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="d-flex container gap-5">
 
-
-
-        <br>
-        <br>
-        <br>
-        <div id="client" style="width: 90%;margin: auto;">
-            <center>
                 <div>
-                    <h3 style="font-size: 64px;font-weight: 600;">
-                        <span style="color: #2C5078;">Our </span> featured clients
-                    </h3>
-                    <p>We Ensure the satisfaction of our clients</p>
+                    <img src="assets/img/solution.svg" class="w-100 h-100" alt="">
                 </div>
-            </center>
-            <div class="p-example__body">
-                <div class="p-example__splide">
-                    <div class="splide" id="example-grid">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
-                                        <img style="width: 40%;" src="assets/img/plantsasriLogo.png" alt="">
-                                    </div>
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
-                                        <h4 style="color: #D7BE69;text-align: center;">PT BUANA NIAGA LESTARI</h4>
-                                    </div>
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
-                                        <img style="width: 40%;" src="assets/img/moodprimalogo.png" alt="">
-                                    </div>
+                <div>
+                    <h3>Our Solution Strategy</h3>
+                    <br>
+                    <div>
+                        <div class="d-flex align-items-center"
+                            style="align-items: center;align-content: center;gap: 10px;">
+                            <img src="assets/img/check_ring_round.svg" alt="">
+                            <p class="mt-3" style="font-size: 32px;">Software Development</p>
 
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
-                                        <img style="width: 40%;" src="assets/img/bonet.jpg" alt="">
-                                    </div>
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
-                                        <img style="width: 40%;" src="assets/img/tni.png" alt="">
-                                    </div>
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center">
-                                        <img style="width: 40%;" src="assets/img/smkn4.svg" alt="">
-                                    </div>
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center">
-                                        <img style="width: 40%;" src="assets/img/logosmkn3.png" alt="">
-                                    </div>
-                                </li>
-                                <li class="p-splide__slide splide__slide">
-                                    <div class="d-flex"
-                                        style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
-                                        <img style="width: 40%;" src="assets/img/logo-bkad.png" alt="">
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
+                        <p class="ms-5">Software development is the process of designing, coding,
+                            testing, and maintaining software systems. </p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-center"
+                            style="align-items: center;align-content: center;gap: 10px;">
+                            <img src="assets/img/check_ring_round.svg" alt="">
+                            <p class="mt-3" style="font-size: 32px;">Outsourcing</p>
+
+                        </div>
+                        <p class="ms-5">Software development is the process of designing, coding,
+                            testing, and maintaining software systems. </p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-center"
+                            style="align-items: center;align-content: center;gap: 10px;">
+                            <img src="assets/img/check_ring_round.svg" alt="">
+                            <p class="mt-3" style="font-size: 32px;">Technology Ecosystem</p>
+
+                        </div>
+                        <p class="ms-5">Software development is the process of designing, coding,
+                            testing, and maintaining software systems. </p>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="assets/img/wave blc.svg" style="width: 100%;margin-bottom: -10px;" alt="">
 
-        <div id="noWherePower">
-            <img src="assets/img/backgroundpowersvg.svg" style="width: 100%;position: absolute;" alt="">
-            <div class="powerWrapper">
-                <center>
-                    <h3 style="color: white;width: 40%;">We solve problems with
-                        our modern solutions</h3>
-                </center>
-
-                <div id="power " style="width: 80%;margin: auto; ">
-                    <div class="d-flex" style="padding-top: 100px;padding-bottom: 30px;gap: 20px;flex-wrap: wrap;">
-                        <div style="flex:1;background: white;border-radius: 10px;" class="p-5 cardPower">
-
-                            <center>
-                                <img style="width: 70%;" src="assets/img/sd.svg" alt="">
-                                <h4 class="mt-4 mb-4">Software Development</h4>
-                            </center>
-                            <div style="display: flex;flex-wrap: wrap;gap: 15px;" class="mt-3">
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/php.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/git.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/js.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/html.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/css.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/sass.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/laravel.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/adobeXD.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/MI.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/django.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/codeigniter.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/flask.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/figma.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/fluter.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/adobe.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/expresJS.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/java.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/kotlin.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/realm.png" alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/sqlite.png"
-                                        alt="">
-                                </div>
-                                <div class="skills">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/yii2.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div style="flex:1;background: white;border-radius: 10px;" class="p-5 cardPower">
-                            <center>
-                                <img style="width: 60%;" src="assets/img/ot.png" alt="">
-                                <h4 class="mt-4">Outsourcing</h4>
-                            </center>
-
-                            <div class="row mt-4">
-                                <div class="d-flex" style="align-items: center;gap: 10px;">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/connection.svg" alt="">
-                                    <p class="mt-3" style="font-size: 12px;">Channeled</p>
-                                </div>
-                                <div class="d-flex" style="align-items: center;gap: 10px;">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/teach.svg" alt="">
-                                    <p class="mt-3" style="font-size: 12px;">Selected talents</p>
-                                </div>
-                                <div class="d-flex" style="align-items: center;gap: 10px;">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/flow.svg" alt="">
-                                    <p class="mt-3" style="font-size: 12px;">Quality</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="flex:1;background: white;border-radius: 10px;" class="p-5 cardPower">
-
-                            <center>
-                                <img style="width: 60%;" src="assets/img/te.svg" alt="">
-                                <h4 style="margin-top: 50px;">Digital Marketing</h4>
-
-
-                            </center>
-
-                            <div class="row mt-4">
-                                <div class="d-flex" style="align-items: center;gap: 10px;">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/inovation.svg" alt="">
-                                    <p class="mt-3" style="font-size: 12px;">Innovation</p>
-                                </div>
-                                <div class="d-flex" style="align-items: center;gap: 10px;">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/aiintegration.svg" alt="">
-                                    <p class="mt-3" style="font-size: 12px;">AI Integration</p>
-                                </div>
-                                <div class="d-flex" style="align-items: center;gap: 10px;">
-                                    <img style="width: 35px;height: 35px;" src="assets/img/ecosystem.svg" alt="">
-                                    <p class="mt-3" style="font-size: 12px;">Ecosystem Comodity</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div style="width: 80%; margin: auto; background: white;border-radius: 10px;box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);"
-                    class="">
-
-                    <section class="splide" id="testi"
-                        style="display: flex;align-items: center;width: 100%;height: 100%;">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide"
-                                    style="display: flex;justify-content: center;align-items: center;">
-                                    <div
-                                        style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
-                                        <img src="assets/img/vectorReviewJumbotron.png" style="width: 50px;" alt="">
-                                        <h5>Ajat</h5>
-                                        <p>nice team! kerjanya sangat luar biasa cepat dan bertanggung jawab. desainnya
-                                            juga gaul banget</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide"
-                                    style="display: flex;justify-content: center;align-items: center;">
-                                    <div
-                                        style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
-                                        <img src="assets/img/vectorReviewJumbotron.png" style="width: 50px;" alt="">
-                                        <h5>Budi Firmansyah Sutanto</h5>
-                                        <p>Luar biasa</p>
-                                    </div>
-                                </li>
-                                <li class="splide__slide"
-                                    style="display: flex;justify-content: center;align-items: center;">
-                                    <div
-                                        style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
-                                        <img src="assets/img/nini.jpeg" style="width: 50px;border-radius: 50%;" alt="">
-                                        <h5>Nini Trianti</h5>
-                                        <p>Excellent service! They did everything fast, and efficient, the communication
-                                            was good and clear even though we only communicated via chat, recommended!
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </section>
-
-                </div>
-
+        <div id="works" style="background-color: #1C2025;">
+            <div class="title" style="font-size: 44px;">
+                Our Works
             </div>
-        </div>
 
+            <section class="portfolio section" style="color: white;">
+                <div class="container">
+                    <div class="top-side">
+                        <h4 class="title">Explore our most recent works</h4>
+                        <h2>An application for all your business need</h2>
+                    </div>
 
-
-        <br>
-        <br>
-
-        <div id="portfolio">
-            <center>
-                <p class="portfolioHeading">An application for all your <span style="color: #2C5078;">Business</span>
-                    need !
-                </p>
-
-                <br>
-                <br>
-
-            </center>
-            <div style="width: 80%;margin: auto;">
-                <section class="splide" id="splidePortfolio">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide" style="width:60%;height: 20px;padding: 20px;">
-                                <div
-                                    style="width:100%;height: 100%; background: url(assets/img/etwpad.png);border-radius: 20px; background-size: cover;background-position:top;">
-                                </div>
-                            </li>
-                            <li class="splide__slide" style="width:20%;height: 20px;padding: 20px;">
-                                <div
-                                    style="width:100%;height: 100%; background: url(assets/img/plantsasri.png);border-radius: 20px; background-size: cover;background-position:top;">
-                                </div>
-                            </li>
-                            <li class="splide__slide" style="width:20%;height: 20px;padding: 20px;">
-                                <div
-                                    style="width:100%;height: 100%; background: url(assets/img/redhunter-page.jpg);border-radius: 20px; background-size: cover;background-position:top;">
-                                </div>
-                            </li>
-                            <li class="splide__slide" style="width:80%;height: 20px;padding: 20px;">
-                                <div
-                                    style="width:100%;height: 100%; background: url(assets/img/bkad.png);border-radius: 20px; background-size: cover;background-position:top;">
-                                </div>
-                            </li>
-                            <li class="splide__slide" style="width:40%;height: 20px;padding: 20px;">
-                                <div
-                                    style="width:100%;height: 100%; background: url(assets/img/scindapsus.svg);border-radius: 20px; background-size: cover;background-position:top;">
-                                </div>
-                            </li>
-                            <li class="splide__slide" style="width:40%;height: 20px;padding: 20px;">
-                                <div
-                                    style="width:100%;height: 100%; background: url(assets/img/smk3.png);border-radius: 20px; background-size: cover;background-position:top;">
-                                </div>
-                            </li>
+                    <div class="filters">
+                        <ul>
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".uiux">UI/UX</li>
+                            <li data-filter=".webapp">Web Application</li>
+                            <li data-filter=".mobileapp">Mobile Application</li>
+                            <li data-filter=".iosapp">IOS Application</li>
+                            <li data-filter=".branding">Branding</li>
                         </ul>
                     </div>
-                </section>
-            </div>
+
+                    <div class="filters-content">
+                        <div class="row grid">
+                            <div class="col-sm-4 all uiux">
+                                <div class="item" style="border-radius: 25px;">
+                                    <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;" src="assets/img/plantsasri.png"
+                                        alt="Work 1">
+                                    <div class="p-inner">
+                                        <h5>Work 1</h5>
+                                        <div class="cat">UI/UX</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 all webapp">
+                                <div class="item" style="border-radius: 25px;">
+                                    <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;" src="assets/img/redhunter-page.jpg"
+                                        alt="Work 1">
+                                    <div class="p-inner">
+                                        <h5>Work 1</h5>
+                                        <div class="cat">Web App</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 all mobileapp">
+                                <div class="item" style="border-radius: 25px;">
+                                    <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;" src="assets/img/bkad.png"
+                                        alt="Work 1">
+                                    <div class="p-inner">
+                                        <h5>Work 1</h5>
+                                        <div class="cat">Mobile App</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 all iosapp">
+                                <div class="item" style="border-radius: 25px;">
+                                    <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;" src="assets/img/etwpad.png"
+                                        alt="Work 1">
+                                    <div class="p-inner">
+                                        <h5>Work 1</h5>
+                                        <div class="cat">IOS App</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 all branding">
+                                <div class="item" style="border-radius: 25px;">
+                                    <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;" src="assets/img/smk3.png"
+                                        alt="Work 1">
+                                    <div class="p-inner">
+                                        <h5>Work 1</h5>
+                                        <div class="cat">Branding</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
         </div>
 
 
+        <div id="services" style="background-color: #1C2025;">
+            <div class="title" style="font-size: 44px;">
+                Intergrate with the services you love
+            </div>
+            <br>
+            <br>
+            <br>
 
+            <div style="width: 50%;height: 350px;display: flex;gap: 20px;margin: auto;">
+                <div style="flex:1;padding:50px;height: 350px;background: white;border-top-left-radius: 25px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/img/react.svg" style="width: 64px;height: 64px;" alt="">
+                        <div style="font-size: 22px;">Web Application</div>
+                    </div>
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
+                        software program that operates over the internet, allowing users to interact with it through web
+                        browsers. These applications provide a wide range of functions and services, such as online
+                        shopping, social networking, email services, document editing, and more.</p>
 
-        <div id="skills" style="margin-top: 150px;">
-            <div style="width: 80%;margin: auto;">
-                <!-- <div class="col-md-8"> -->
-                <div class="d-flex skillsWrapper">
-
-                    <p class="skillsHeading">
-                        <span style="color: #2C5078;">Intergrate</span> with the
-                        services you <span style="color: pink;">love</span>
-                    </p>
-                    <!-- <div id="learn_more"> -->
-                    <!-- <div class="col-md-2 text-right"> -->
-                    <!-- <button class="btn text-white custom-margin skillsButton">Learn
-                        More</button> -->
-                    <!-- </div> -->
-
-
-                    <!-- </div> -->
                 </div>
-                <br><br><br>
-                <div class="grid-container">
-                    <div class="service1">
-                        <div class="d-flex"
-                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left; padding-top: 10px;">
-                            <div class="mt-1">
-                                <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/webdev.svg"
-                                    alt="">
-
-                                <h4 style="font-size: 20px;font-weight: 500;">Web</h4>
-                                <h4 style="font-size: 20px;font-weight: 500;">Application</h4>
-                                <p style="font-size: 15px;">
-                                    Join Us on a Journey to Digital Success with Our Extensive Range of Personalized Web
-                                    Application Services,
-                                    Thoughtfully Designed to Elevate Your Online Presence, Boost Operational Efficiency,
-                                    Nurture Growth,
-                                    and Create a Legacy of Achievements, All Fueled by Our Passion for Delivering
-                                    Top-Notch Solutions and Supporting
-                                    You in Your Exciting Digital Ventures.</p>
-                            </div>
-                        </div>
+                <div
+                    style="flex:1;padding:50px;height: 350px;margin-top: 60px;background: white;border-top-right-radius: 25px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/img/figma.svg" style="width: 64px;height: 64px;" alt="">
+                        <div style="font-size: 22px;">Web Application</div>
 
                     </div>
-                    <div class="service2">
-                        <div class="d-flex"
-                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
-                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/machine.svg"
-                                alt="">
-
-                            <div class="mt-1">
-                                <h4 style="font-size: 20px;font-weight: 500;">Machine Learning</h4>
-                                <p style="font-size: 15px;">Delve into the Realm of Machine Learning with Our Tailored
-                                    Services, Enhancing Data Insights, Boosting Efficiency,
-                                    and Nurturing Growth, Supported by Our Commitment to Innovative Solutions and Your
-                                    Path to Success.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service3">
-                        <div class="d-flex"
-                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
-                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/frontend.svg"
-                                alt="">
-
-                            <div class="mt-1">
-                                <h4 style="font-size: 20px;font-weight: 500;">Front-End</h4>
-                                <p style="font-size: 15px;">Embark on a Journey into Front-End Excellence with Our
-                                    Specialized Services, Elevating User Experience,
-                                    Crafting Innovative Solutions, and Paving the Way for Your Success through Effective
-                                    Design. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service4">
-                        <div class="d-flex"
-                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
-                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/design.svg"
-                                alt="">
-
-                            <div class="mt-1">
-                                <h4 style="font-size: 20px;font-weight: 500;">UI/UX Design</h4>
-                                <p style="font-size: 15px;">Immerse Yourself in UI/UX Mastery with Our Specialized
-                                    Services,
-                                    Focused on Elevating User Experience, Crafting Innovative Designs, and Paving the
-                                    Path to Your Success in User-Centric Solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service5">
-                        <div class="d-flex"
-                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
-                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/mobiledev.svg"
-                                alt="">
-
-                            <div class="mt-1">
-                                <h4 style="font-size: 20px;font-weight: 500;">Mobile</h4>
-                                <h4 style="font-size: 20px;font-weight: 500;">Application</h4>
-                                <p style="font-size: 15px;">
-                                    Embark on an Exciting Journey to Mobile Excellence with Our Diverse Portfolio of
-                                    Tailored Mobile Application Services,
-                                    Creatively Designed to Enhance Your Mobile Presence, Streamline Operational
-                                    Efficiency, Cultivate Sustainable Growth,
-                                    and Establish a Legacy of Remarkable Achievements. Our Unwavering Passion for
-                                    Delivering Top-Quality Solutions and Providing
-                                    Full Support in Your Thrilling Mobile Ventures Powers Your Path to Digital Triumph.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service6">
-                        <div class="d-flex"
-                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
-                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/backend.svg"
-                                alt="">
-
-                            <div class="mt-1">
-                                <h4 style="font-size: 20px;font-weight: 500;">Back-End</h4>
-                                <p style="font-size: 15px;">Experience Back-End Excellence with Our Tailored Back-End
-                                    Service, Uplifting Functionality, Maximizing Efficiency,
-                                    and Cultivating Growth, Empowered by Our Dedication to Pioneering Solutions and
-                                    Enabling Your Journey to Triumph.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
+                        software program that operates over the internet, allowing users to interact with it through web
+                        browsers. These applications provide a wide range of functions and services, such as online
+                        shopping, social networking, email services, document editing, and more.</p>
                 </div>
             </div>
+            <br>
+            <div style="width: 50%;height: 350px;display: flex;gap: 20px;margin: auto;">
+                <div style="flex:1;padding:50px;height: 350px;background: white;border-bottom-left-radius: 25px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/img/Python-logo-notext.svg.png" style="width: 64px;height: 64px;" alt="">
+                        <div style="font-size: 22px;">Web Application</div>
+
+                    </div>
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
+                        software program that operates over the internet, allowing users to interact with it through web
+                        browsers. These applications provide a wide range of functions and services, such as online
+                        shopping, social networking, email services, document editing, and more.</p>
+                </div>
+                <div
+                    style="flex:1;padding:50px;height: 350px;margin-top: 60px;background: white;border-bottom-right-radius: 25px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/img/flutter.svg" style="width: 64px;height: 64px;" alt="">
+                        <div style="font-size: 22px;">Web Application</div>
+
+                    </div>
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
+                        software program that operates over the internet, allowing users to interact with it through web
+                        browsers. These applications provide a wide range of functions and services, such as online
+                        shopping, social networking, email services, document editing, and more.</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
         </div>
 
 
+        <div id="feedbacks" style="background-color: #1C2025;">
+            <div style="width: 90%;margin:auto">
+                <div class="title" style="text-align: left; font-size: 44px;">
+                    Feedback from delighted clients
+                </div>
+            </div>
+            <div class="testimonial-slider">
+                <div id="carouselExampleControls" class="carousel carousel-dark">
+                    <div class="container-fluid">
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card" style="border-radius: 25px;padding: 30px;">
+
+                                            <div class="card-body">
+                                                <img src="assets/img/bactick.svg" alt="">
+                                                <p class="card-text mt-3">I've been using the web application for a few
+                                                    months now, and I must say it has significantly improved the
+                                                    efficiency of our daily operations. The user-friendly interface
+                                                    makes navigation a breeze, and the added features, such as real-time
+                                                    updates and analytics, have been game-changers for our business.</p>
+                                            </div>
+                                            <div class="d-flex align-content-center align-items-center">
+                                                <div style="flex: 1;">
+                                                    <img src="assets/img/reksa.svg"
+                                                        style="border-radius: 50%;width: 64px;height: 64px;box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); "
+                                                        alt="">
+
+                                                </div>
+                                                <div style="flex: 6;">
+                                                    <div class="mt-4">
+                                                        <h6>Kepet Rider</h6>
+                                                        <p>Ceo Of KepetCode</p>
+                                                    </div>
+                                                </div>
+                                                <div style="flex: 1;">
+                                                    <div class="mt-4">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="card" style="border-radius: 25px;padding: 30px;">
+
+                                            <div class="card-body">
+                                                <img src="assets/img/bactick.svg" alt="">
+                                                <p class="card-text mt-3">I've been using the web application for a few
+                                                    months now, and I must say it has significantly improved the
+                                                    efficiency of our daily operations. The user-friendly interface
+                                                    makes navigation a breeze, and the added features, such as real-time
+                                                    updates and analytics, have been game-changers for our business.</p>
+                                            </div>
+                                            <div class="d-flex align-content-center align-items-center">
+                                                <div style="flex: 1;">
+                                                    <img src="assets/img/reksa.svg"
+                                                        style="border-radius: 50%;width: 64px;height: 64px;box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); "
+                                                        alt="">
+
+                                                </div>
+                                                <div style="flex: 6;">
+                                                    <div class="mt-4">
+                                                        <h6>Kepet Rider</h6>
+                                                        <p>Ceo Of KepetCode</p>
+                                                    </div>
+                                                </div>
+                                                <div style="flex: 1;">
+                                                    <div class="mt-4">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="card" style="border-radius: 25px;padding: 30px;">
+
+                                            <div class="card-body">
+                                                <img src="assets/img/bactick.svg" alt="">
+                                                <p class="card-text mt-3">I've been using the web application for a few
+                                                    months now, and I must say it has significantly improved the
+                                                    efficiency of our daily operations. The user-friendly interface
+                                                    makes navigation a breeze, and the added features, such as real-time
+                                                    updates and analytics, have been game-changers for our business.</p>
+                                            </div>
+                                            <div class="d-flex align-content-center align-items-center">
+                                                <div style="flex: 1;">
+                                                    <img src="assets/img/reksa.svg"
+                                                        style="border-radius: 50%;width: 64px;height: 64px;box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12); "
+                                                        alt="">
+
+                                                </div>
+                                                <div style="flex: 6;">
+                                                    <div class="mt-4">
+                                                        <h6>Kepet Rider</h6>
+                                                        <p>Ceo Of KepetCode</p>
+                                                    </div>
+                                                </div>
+                                                <div style="flex: 1;">
+                                                    <div class="mt-4">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-black w-100 row" style="position: absolute;">
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+
+                            <button class="carousel-control-next" style="position: absolute;" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
 
 
-        <div id="getInTouch" style="margin-top: 150px;">
-
-            <div class="d-flex getInTouchWrapper" style="width: 80%;margin: auto;gap: 150px;justify-content: center;">
-                <div style="flex:3;">
-                    <h3>Get in touch with us</h3>
-                    <p>Reach Out and Connect with StartCode, Let's Collaborate, Answer Your Questions, and Support Your
-                        Journey to Success!</p>
                 </div>
 
-                <form style="flex: 4;" class="contact1-form validate-form" name="contact" data-netlify="true"
-                    onSubmit="submit" method="post" data-netlify-honeypot="bot-field">
-                    <input name="bot-field" class="d-none">
+            </div>
 
-                    <div class="row">
-                        <div class="col-md-6" data-validate="Name is required">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+
+        </div>
+
+
+        <div id="faq" style="background-color: #1C2025;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="title">Frequently Asked Questions</div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="d-flex justify-content-center ">
+
+
+                <div class="wrapper ">
+                    <div class="item-wrapper">
+                        <div class="item-title" data-index="0">What is XYZ Tech News Company?</div>
+                        <div class="content-outer">
+                            <div class="content">XYZ Tech News Company is an online platform dedicated to delivering the
+                                latest and most relevant news in the world of technology. We cover a wide range of
+                                topics, including but not limited to gadgets, software, cybersecurity, artificial
+                                intelligence, and emerging technologies. Our mission is to keep our readers informed and
+                                engaged with the rapidly evolving tech landscape.</div>
                         </div>
-                        <div class="col-md-6" data-validate="Valid email is required: leo@gmail.com">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item-title" data-index="1">How often is the content updated on XYZ Tech News
+                            Company?</div>
+                        <div class="content-outer">
+                            <div class="content">At XYZ Tech News Company, we understand the importance of staying
+                                up-to-date with the latest tech news. Therefore, we update our content on a daily basis.
+                                Our team of experienced writers and editors work diligently to bring you timely and
+                                accurate news articles, reviews, and analysis.</div>
                         </div>
-
                     </div>
-                    <br>
-
-                    <div class="row">
-                        <div class="col-md-12" data-validate="Subject is required">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                    <div class="item-wrapper">
+                        <div class="item-title" data-index="2">Can I submit news tips or press releases to XYZ Tech News
+                            Company?</div>
+                        <div class="content-outer">
+                            <div class="content">Absolutely! We encourage our readers and industry professionals to
+                                submit news tips, press releases, and any relevant information that may be of interest
+                                to our audience. You can reach out to us through our contact page or email us directly.
+                                We review all submissions and strive to cover stories that align with our editorial
+                                guidelines and audience interests.</div>
                         </div>
-
-
                     </div>
-                    <br>
-                    <div data-validate="Message is required">
-                        <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <div class="item-wrapper">
+                        <div class="item-title" data-index="3">Can I share articles from XYZ Tech News Company on social
+                            media or other platforms?</div>
+                        <div class="content-outer">
+                            <div class="content">Yes, you can! We appreciate and encourage our readers to share our
+                                articles across various platforms, including social media channels, blogs, and forums.
+                                We provide social media sharing buttons on each article, making it easy for you to
+                                spread the word about the latest tech news and insights.</div>
+                        </div>
                     </div>
-                    <br>
+                    <div class="item-wrapper">
+                        <div class="item-title" data-index="4">How can I stay updated with the latest news from XYZ Tech
+                            News Company?</div>
+                        <div class="content-outer">
+                            <div class="content">To stay updated with the latest news from XYZ Tech News Company, there
+                                are several options available. Firstly, you can subscribe to our newsletter, where we
+                                send regular updates featuring our top stories and exclusive content. Additionally, you
+                                can follow us on social media platforms such as Twitter, Facebook, and LinkedIn, where
+                                we share our articles and engage with our audience. Finally, you can visit our website
+                                regularly or bookmark it for easy access to our latest articles.</div>
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item-title" data-index="5">How can I stay updated with the latest news from XYZ Tech
+                            News Company?</div>
+                        <div class="content-outer">
+                            <div class="content">To stay updated with the latest news from XYZ Tech News Company, there
+                                are several options available. Firstly, you can subscribe to our newsletter, where we
+                                send regular updates featuring our top stories and exclusive content. Additionally, you
+                                can follow us on social media platforms such as Twitter, Facebook, and LinkedIn, where
+                                we share our articles and engage with our audience. Finally, you can visit our website
+                                regularly or bookmark it for easy access to our latest articles.</div>
+                        </div>
+                    </div>
+                </div>
 
-                    <button class="btn btn-success w-100" style="background: #1A2634;">Send your message</button>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="contact" style="background-color: #1C2025;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="title" style="font-size: 44px;">
+            Get In Touch With Us
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container text-white">
+            <div class="d-flex justify-content-evenly p-5">
+                <div style="flex: 1;">
+                    <h3 style="width:40rem;font-size: 44px;">Let’s level up your
+                        businness, together</h3>
+                </div>
+                <img src="assets/img/getintouch.svg" alt="">
+
+            </div>
+            <br>
+            <br>
+            <div style="padding-left: 50px;padding-right: 50px;">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputPassword4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">Address 2</label>
+                        <input type="text" class="form-control" style="height: 150px;border-radius: 25px;"
+                            id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-12 mt-5">
+                        <button type="submit" class="btn w-100 text-white"
+                            style="background: #5E4BF5;height: 60px;border-radius: 25px;">Sign in</button>
+                    </div>
                 </form>
             </div>
         </div>
 
+    </div>
 
+    <div id="footer" style="background: #1C2025;color: white;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="d-flex footerContainer" style="justify-content: space-between;padding: 20px;">
+                <div class="brand d-flex  gap-2" style="flex:1">
+                    <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
 
-        <img src="assets/img/footer.svg" style="width: 100%;margin-top:200px;margin-bottom: -10px;" alt="">
-        <div id="footer" style="background: #1A2634;color: white;">
-            <div class="container">
-                <div class="d-flex footerContainer" style="justify-content: space-between;padding: 20px;">
-                    <div class="brand d-flex  gap-2" style="flex:1">
-                        <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
-
-                        <h4 class="mt-3">STARTCODE</h4>
+                    <h4 class="mt-3">Startcode</h4>
+                </div>
+                <div class="main d-flex flex-wrap" style="justify-content: space-evenly;flex:3">
+                    <div>
+                        <h4 style="font-size: 30px;">Services</h4>
+                        <ul class="footerUl">
+                            <li><a href="" class="link">Development</a></li>
+                            <li><a href="" class="link">Outsorce</a></li>
+                            <li><a href="" class="link">Ecosystem</a></li>
+                        </ul>
                     </div>
-                    <div class="main d-flex flex-wrap" style="justify-content: space-evenly;flex:3">
-                        <div>
-                            <h4 style="font-size: 30px;">Services</h4>
-                            <ul class="footerUl">
-                                <li><a href="" class="link">Development</a></li>
-                                <li><a href="" class="link">Outsorce</a></li>
-                                <li><a href="" class="link">Ecosystem</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 30px;">Company</h4>
+                    <div>
+                        <h4 style="font-size: 30px;">Company</h4>
 
-                            <ul class="footerUl">
-                                <li><a href="" class="link">Security</a></li>
-                                <li><a href="" class="link">Terms</a></li>
-                                <li><a href="" class="link">Security</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 30px;">Contact & Adress</h4>
-
-                            <ul class="footerUl">
-                                <li>startcodedigital@gmail.com</li>
-                                <li>+62 852 8004 4559</li>
-                                <li>Bogor Barat, Bogor, Jawa Barat</li>
-                            </ul>
-                        </div>
+                        <ul class="footerUl">
+                            <li><a href="" class="link">Security</a></li>
+                            <li><a href="" class="link">Terms</a></li>
+                            <li><a href="" class="link">Security</a></li>
+                        </ul>
                     </div>
-                    <div class="social" style="flex:1">
-                        <h4 style="font-size: 30px;">Available On</h4>
+                    <div>
+                        <h4 style="font-size: 30px;">Contact & Adress</h4>
 
-                        <div class="d-flex gap-3 ms-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
-                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
-                                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
-                                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
-                                fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                                <path
-                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                            </svg>
-                        </div>
+                        <ul class="footerUl">
+                            <li>startcodedigital@gmail.com</li>
+                            <li>+62 852 8004 4559</li>
+                            <li>Bogor Barat, Bogor, Jawa Barat</li>
+                        </ul>
                     </div>
                 </div>
-                <hr>
-                <center>
-                    <div class="copy" style="padding: 40px;">
-                        Copyright © 2023 - StartCode
-                    </div>
-                </center>
-            </div>
+                <div class="social" style="flex:1">
+                    <h4 style="font-size: 30px;">Available On</h4>
 
+                    <div class="d-flex gap-3 ms-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                            fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                            fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                            fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                            fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <center>
+                <div class="copy" style="padding: 40px;">
+                    Copyright © 2023 - StartCode
+                </div>
+            </center>
         </div>
+
+    </div>
 
 
 
@@ -846,49 +1326,101 @@
     <script
         src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js"
         integrity="sha256-l7eXiSofMCMpOBYpj9znCTM46MCE5nIP50pySV6W9lY=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
     <script>
+        var multipleCardCarousel = document.querySelector("#carouselExampleControls");
 
-    </script>
-    <script>
-        var splide = new Splide('.splide', {
-            type: 'loop',
-            perPage: 1,
-            perMove: 1,
-            height: '100%',
-            pagination: false,
-            breakpoints: {
-                1000: {
-                    perPage: 1,
+        if (window.matchMedia("(min-width: 576px)").matches) {
+            var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                interval: false
+            });
+            var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+            var cardWidth = $(".carousel-item").width();
+            var scrollPosition = 0;
+            $("#carouselExampleControls .carousel-control-next").on("click", function () {
+                if (scrollPosition < carouselWidth - cardWidth * 2) {
+                    scrollPosition += cardWidth;
+                    $("#carouselExampleControls .carousel-inner").animate({
+                            scrollLeft: scrollPosition
+                        },
+                        600
+                    );
                 }
-            }
-        });
-
-        splide.mount();
-
-
-        setInterval(() => {
-            $('.splide__arrow--next:first').click();
-        }, 3000);
+            });
+            $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+                if (scrollPosition > 0) {
+                    scrollPosition -= cardWidth;
+                    $("#carouselExampleControls .carousel-inner").animate({
+                            scrollLeft: scrollPosition
+                        },
+                        600
+                    );
+                }
+            });
+        } else {
+            $(multipleCardCarousel).addClass("slide");
+        }
     </script>
 
     <script>
-        var splidePortfolio = new Splide('#splidePortfolio', {
-            type: 'loop',
-            perPage: 1,
-            perMove: 1,
-            height: '50rem',
-            cover: false,
-            autoWidth: true,
-            breakpoints: {
-                1000: {
-                    perPage: 1,
-                    autoWidth: false
-                }
-            }
-        });
+        const wrapper = document.querySelector('.wrapper')
 
-        splidePortfolio.mount();
+        let activeIndex = null;
+
+        const updateContentHeight = (contentWrapper, isOpen) => {
+            if (isOpen) {
+                // close previous
+                if (activeIndex !== null) {
+                    const prev = wrapper.querySelector(`.item-title[data-index="${activeIndex}"]`)
+                    prev.nextElementSibling.style.height = 0
+                }
+
+                // open new
+                const contentDom = contentWrapper.querySelector('.content')
+                const contentHeight = contentDom.clientHeight
+                contentWrapper.style.height = contentHeight + 'px'
+            } else {
+                contentWrapper.style.height = 0
+            }
+        }
+
+        const updateActiveIndex = (newIndex) => {
+            const oldIndex = activeIndex
+            activeIndex = newIndex
+            // update class
+            if (oldIndex !== null) {
+                const dom = wrapper.querySelector(`.item-title[data-index="${oldIndex}"]`)
+                dom.parentElement.classList.remove('active')
+            }
+            if (newIndex !== null) {
+                const dom = wrapper.querySelector(`.item-title[data-index="${newIndex}"]`)
+                dom.parentElement.classList.add('active')
+            }
+        }
+
+        wrapper.addEventListener('click', (e) => {
+            const isTitle = Array.from(e.target.classList).includes('item-title')
+            if (!isTitle) return
+
+            const targetIndex = Number(e.target.getAttribute('data-index'))
+            const contentWrapper = e.target.nextElementSibling
+            const isOpen = targetIndex !== activeIndex
+            updateContentHeight(contentWrapper, isOpen)
+            updateActiveIndex(isOpen ? targetIndex : null)
+        })
+
+        window.addEventListener('resize', async () => {
+            if (activeIndex !== null) {
+                await new Promise(resolve => setTimeout(resolve, 500))
+                const titleDom = wrapper.querySelector(`.item-title[data-index="${activeIndex}"]`)
+                const contentWrapper = titleDom.nextElementSibling
+                const contentDom = contentWrapper.querySelector('.content')
+                const contentHeight = contentDom.clientHeight
+                contentWrapper.style.height = contentHeight + 'px'
+            }
+        })
     </script>
+
 
     <script>
         function closeNavbar() {
@@ -940,25 +1472,25 @@
     </script>
 
     <script>
-        var testi = new Splide('#testi', {
-            type: 'loop',
-            perPage: 3,
-            perMove: 1,
-            focus: 'center',
-            height: '20rem',
-            cover: false,
-            autoWidth: true,
-            autoplay: true,
-            breakpoints: {
-                1000: {
-                    perPage: 1,
-                    autoWidth: false
-                }
-            }
+        $('.filters ul li').click(function () {
+            $('.filters ul li').removeClass('active');
+            $(this).addClass('active');
+
+            var data = $(this).attr('data-filter');
+            $grid.isotope({
+                filter: data
+            })
         });
 
-        testi.mount();
+        var $grid = $(".grid").isotope({
+            itemSelector: ".all",
+            percentPosition: true,
+            masonry: {
+                columnWidth: ".all"
+            }
+        })
     </script>
+
     <script src="assets/js/scripts.js" type="module"></script>
 </body>
 

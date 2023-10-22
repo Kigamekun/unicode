@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTCODE TECHNOLOGY DIGITAL</title>
+    <meta name="description"
+        content="Startcode is the right solution for those of you who need digitization in any aspect, both in Indonesia and internationally.">
+    <meta name="keywords"
+        content="startcode, coding, digital, php, website, web development, make your own website, code, laravel">
+    <meta name="author" content="Startcode Indonesia">
+    <meta property="og:title" content="Startcode Your Code Friend's" />
+    <meta property="og:url" content="https://startcode.id" />
+    <meta property="og:image" itemprop="image" content="assets/img/scode.svg" />
+    <link rel="stylesheet" href="assets/vendor/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendor/slick/slick-theme.css">
+    <meta property="og:image:url" itemprop="image" content="assets/img/scode.svg" />
+    <meta property="og:image:type" content="image/png" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="asstets/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/util.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="assets/vendor/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendor/slick/slick-theme.css">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
+    <meta property="og:locale" content="id" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Link to the file hosted on your server, -->
+    <link rel="stylesheet" href="assets/vendor/splide-4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "startcodedigital@gmail.com",
+                    Password: "nabilaleoreksa",
+                    To: 'startcodedigital@gmail.com',
+                    From: "sender@email_address.com",
+                    Subject: "Sending Email using javascript",
+                    Body: "Well that was easy!!"
+                })
+                .then(function (message) {
+                    alert("Mail has been sent successfully")
+                });
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div id="phoneNavbar" class="absolute-navbar"
+        style="width: 100px;height: 500px;background: white;position: fixed;;z-index: 99999999;border-radius: 10px;border:2px solid black;top: 25%;margin-left:10px">
+        <div class="d-flex "
+            style="height: 100%;width: 100%; flex-direction: column;gap:10px;justify-content: center;align-items: center;">
+            <button class="btn" onclick="closeNavbar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <a href="#app">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-house"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                </svg>
+
+            </a>
+            <center>Home</center>
+
+            <button onclick="scrollToElement('client')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-people-fill"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                </svg>
+
+            </button>
+            <center>Client</center>
+
+            <button onclick="scrollToElement('noWherePower')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-building"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z" />
+                    <path
+                        d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z" />
+                </svg>
+
+            </button>
+            <center>Objective</center>
+            <button onclick="scrollToElement('portfolio')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-archive"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                </svg>
+
+            </button>
+            <center>Portfolio</center>
+            <button onclick="scrollToElement('skills')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-braces"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z" />
+                </svg>
+
+            </button>
+            <center>Tech Stack</center>
+            <button onclick="scrollToElement('getInTouch')" class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
+                    class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                </svg>
+            </button>
+            <center>Contact Us</center>
+        </div>
+    </div>
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="assets/img/up.svg" alt=""></button>
+
+    <div id="app">
+
+        <div style="background: url(assets/img/Wave\ BG.svg);background-size: cover;margin-top: -10px;">
+
+            <img src="assets/img/Satrs.svg" id="stars" style="width: 100%;height: 100vh; position: absolute;top:-40px; "
+                alt="">
+            <div id="navbar" class="container">
+
+                <div class="brand d-flex gap-3">
+                    <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
+                    <h3 style="color:white" class="mt-3">Startcode</h3>
+                </div>
+                <div class="menu" style="z-index: 999999;">
+                    <ul>
+                        <li style="color:white"><a href="#app" class="link">Home</a></li>
+                        <li style="color:white"><button onclick="scrollToElement('client')" class="link">Client</button>
+                        </li>
+                        <li style="color:white"><button onclick="scrollToElement('noWherePower')" class="link">Our
+                                Business</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('portfolio')"
+                                class="link">Portfolio</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('skills')"
+                                class="link">Service</button></li>
+                        <li style="color:white"><button onclick="scrollToElement('getInTouch')" class="link">Contact
+                                </button></li>
+                        <li style="color:white"><button onclick="window.location.href='https://wa.me/6285280044559';" class="btn btn-success link">Contact Us</button></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center btnPhone">
+                    <button id="buttonNavbar" onclick="openNavbar()" class="btn d-flex mt-3"
+                        style="align-items: center;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white" class="bi bi-list"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- HERO -->
+            <div id="hero">
+                <div class="mainHero">
+                    <!-- <h1 style="color:white ;font-weight: 600;" class="heroHead">Adapt with Technology Solution</h1> -->
+                    <h1 style="color:white ;font-weight: 600;" class="heroHead">Revolutionize Your Digital World</h1>
+
+                    <!-- <p style="color: white;">Make your business path through the world, with the help of technology at
+                        <span style="color: white;">StartCode</span>.</p> -->
+                    <p style="color: white;">Transform and accelerate the growth of your digital business with
+                        <span style="color: #6668f5;">StartCode</span>.</p>
+                    <!-- <button class="btn mt-5 buttonStart">Check Our Services</button> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <div id="client" style="width: 90%;margin: auto;">
+            <center>
+                <div>
+                    <h3 style="font-size: 64px;font-weight: 600;">
+                        <span style="color: #2C5078;">Our </span> featured clients
+                    </h3>
+                    <p>We Ensure the satisfaction of our clients</p>
+                </div>
+            </center>
+            <div class="p-example__body">
+                <div class="p-example__splide">
+                    <div class="splide" id="example-grid">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
+                                        <img style="width: 40%;" src="assets/img/plantsasriLogo.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
+                                        <h4 style="color: #D7BE69;text-align: center;">PT BUANA NIAGA LESTARI</h4>
+                                    </div>
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
+                                        <img style="width: 40%;" src="assets/img/moodprimalogo.png" alt="">
+                                    </div>
+
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
+                                        <img style="width: 40%;" src="assets/img/bonet.jpg" alt="">
+                                    </div>
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center;">
+                                        <img style="width: 40%;" src="assets/img/tni.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center">
+                                        <img style="width: 40%;" src="assets/img/smkn4.svg" alt="">
+                                    </div>
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: row;width: 100%;height: 100%;align-items: center;justify-content: center">
+                                        <img style="width: 40%;" src="assets/img/logosmkn3.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="p-splide__slide splide__slide">
+                                    <div class="d-flex"
+                                        style="flex-direction: column;width: 100%;height: 100%;align-items: center;justify-content: center;">
+                                        <img style="width: 40%;" src="assets/img/logo-bkad.png" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div id="noWherePower">
+            <img src="assets/img/backgroundpowersvg.svg" style="width: 100%;position: absolute;" alt="">
+            <div class="powerWrapper">
+                <center>
+                    <h3 style="color: white;width: 40%;">We solve problems with
+                        our modern solutions</h3>
+                </center>
+
+                <div id="power " style="width: 80%;margin: auto; ">
+                    <div class="d-flex" style="padding-top: 100px;padding-bottom: 30px;gap: 20px;flex-wrap: wrap;">
+                        <div style="flex:1;background: white;border-radius: 10px;" class="p-5 cardPower">
+
+                            <center>
+                                <img style="width: 70%;" src="assets/img/sd.svg" alt="">
+                                <h4 class="mt-4 mb-4">Software Development</h4>
+                            </center>
+                            <div style="display: flex;flex-wrap: wrap;gap: 15px;" class="mt-3">
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/php.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/git.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/js.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/html.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/css.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/sass.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/laravel.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/adobeXD.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/MI.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/django.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/codeigniter.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/flask.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/figma.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/fluter.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/adobe.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/expresJS.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/java.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/kotlin.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/realm.png" alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/sqlite.png"
+                                        alt="">
+                                </div>
+                                <div class="skills">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/iconSkills/yii2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="flex:1;background: white;border-radius: 10px;" class="p-5 cardPower">
+                            <center>
+                                <img style="width: 60%;" src="assets/img/ot.png" alt="">
+                                <h4 class="mt-4">Outsourcing</h4>
+                            </center>
+
+                            <div class="row mt-4">
+                                <div class="d-flex" style="align-items: center;gap: 10px;">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/connection.svg" alt="">
+                                    <p class="mt-3" style="font-size: 12px;">Channeled</p>
+                                </div>
+                                <div class="d-flex" style="align-items: center;gap: 10px;">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/teach.svg" alt="">
+                                    <p class="mt-3" style="font-size: 12px;">Selected talents</p>
+                                </div>
+                                <div class="d-flex" style="align-items: center;gap: 10px;">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/flow.svg" alt="">
+                                    <p class="mt-3" style="font-size: 12px;">Quality</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="flex:1;background: white;border-radius: 10px;" class="p-5 cardPower">
+
+                            <center>
+                                <img style="width: 60%;" src="assets/img/te.svg" alt="">
+                                <h4 style="margin-top: 50px;">Digital Marketing</h4>
+
+
+                            </center>
+
+                            <div class="row mt-4">
+                                <div class="d-flex" style="align-items: center;gap: 10px;">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/inovation.svg" alt="">
+                                    <p class="mt-3" style="font-size: 12px;">Innovation</p>
+                                </div>
+                                <div class="d-flex" style="align-items: center;gap: 10px;">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/aiintegration.svg" alt="">
+                                    <p class="mt-3" style="font-size: 12px;">AI Integration</p>
+                                </div>
+                                <div class="d-flex" style="align-items: center;gap: 10px;">
+                                    <img style="width: 35px;height: 35px;" src="assets/img/ecosystem.svg" alt="">
+                                    <p class="mt-3" style="font-size: 12px;">Ecosystem Comodity</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="width: 80%; margin: auto; background: white;border-radius: 10px;box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);"
+                    class="">
+
+                    <section class="splide" id="testi"
+                        style="display: flex;align-items: center;width: 100%;height: 100%;">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide"
+                                    style="display: flex;justify-content: center;align-items: center;">
+                                    <div
+                                        style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
+                                        <img src="assets/img/vectorReviewJumbotron.png" style="width: 50px;" alt="">
+                                        <h5>Ajat</h5>
+                                        <p>nice team! kerjanya sangat luar biasa cepat dan bertanggung jawab. desainnya
+                                            juga gaul banget</p>
+                                    </div>
+                                </li>
+                                <li class="splide__slide"
+                                    style="display: flex;justify-content: center;align-items: center;">
+                                    <div
+                                        style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
+                                        <img src="assets/img/vectorReviewJumbotron.png" style="width: 50px;" alt="">
+                                        <h5>Budi Firmansyah Sutanto</h5>
+                                        <p>Luar biasa</p>
+                                    </div>
+                                </li>
+                                <li class="splide__slide"
+                                    style="display: flex;justify-content: center;align-items: center;">
+                                    <div
+                                        style="width: 600px;display: flex;justify-content: center;flex-direction: column;align-items: center;gap:10px;text-align: center;">
+                                        <img src="assets/img/nini.jpeg" style="width: 50px;border-radius: 50%;" alt="">
+                                        <h5>Nini Trianti</h5>
+                                        <p>Excellent service! They did everything fast, and efficient, the communication
+                                            was good and clear even though we only communicated via chat, recommended!
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <br>
+        <br>
+
+        <div id="portfolio">
+            <center>
+                <p class="portfolioHeading">An application for all your <span style="color: #2C5078;">Business</span>
+                    need !
+                </p>
+
+                <br>
+                <br>
+
+            </center>
+            <div style="width: 80%;margin: auto;">
+                <section class="splide" id="splidePortfolio">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide" style="width:60%;height: 20px;padding: 20px;">
+                                <div
+                                    style="width:100%;height: 100%; background: url(assets/img/etwpad.png);border-radius: 20px; background-size: cover;background-position:top;">
+                                </div>
+                            </li>
+                            <li class="splide__slide" style="width:20%;height: 20px;padding: 20px;">
+                                <div
+                                    style="width:100%;height: 100%; background: url(assets/img/plantsasri.png);border-radius: 20px; background-size: cover;background-position:top;">
+                                </div>
+                            </li>
+                            <li class="splide__slide" style="width:20%;height: 20px;padding: 20px;">
+                                <div
+                                    style="width:100%;height: 100%; background: url(assets/img/redhunter-page.jpg);border-radius: 20px; background-size: cover;background-position:top;">
+                                </div>
+                            </li>
+                            <li class="splide__slide" style="width:80%;height: 20px;padding: 20px;">
+                                <div
+                                    style="width:100%;height: 100%; background: url(assets/img/bkad.png);border-radius: 20px; background-size: cover;background-position:top;">
+                                </div>
+                            </li>
+                            <li class="splide__slide" style="width:40%;height: 20px;padding: 20px;">
+                                <div
+                                    style="width:100%;height: 100%; background: url(assets/img/scindapsus.svg);border-radius: 20px; background-size: cover;background-position:top;">
+                                </div>
+                            </li>
+                            <li class="splide__slide" style="width:40%;height: 20px;padding: 20px;">
+                                <div
+                                    style="width:100%;height: 100%; background: url(assets/img/smk3.png);border-radius: 20px; background-size: cover;background-position:top;">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+
+
+
+        <div id="skills" style="margin-top: 150px;">
+            <div style="width: 80%;margin: auto;">
+                <!-- <div class="col-md-8"> -->
+                <div class="d-flex skillsWrapper">
+
+                    <p class="skillsHeading">
+                        <span style="color: #2C5078;">Intergrate</span> with the
+                        services you <span style="color: pink;">love</span>
+                    </p>
+                    <!-- <div id="learn_more"> -->
+                    <!-- <div class="col-md-2 text-right"> -->
+                    <!-- <button class="btn text-white custom-margin skillsButton">Learn
+                        More</button> -->
+                    <!-- </div> -->
+
+
+                    <!-- </div> -->
+                </div>
+                <br><br><br>
+                <div class="grid-container">
+                    <div class="service1">
+                        <div class="d-flex"
+                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left; padding-top: 10px;">
+                            <div class="mt-1">
+                                <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/webdev.svg"
+                                    alt="">
+
+                                <h4 style="font-size: 20px;font-weight: 500;">Web</h4>
+                                <h4 style="font-size: 20px;font-weight: 500;">Application</h4>
+                                <p style="font-size: 15px;">
+                                    Join Us on a Journey to Digital Success with Our Extensive Range of Personalized Web
+                                    Application Services,
+                                    Thoughtfully Designed to Elevate Your Online Presence, Boost Operational Efficiency,
+                                    Nurture Growth,
+                                    and Create a Legacy of Achievements, All Fueled by Our Passion for Delivering
+                                    Top-Notch Solutions and Supporting
+                                    You in Your Exciting Digital Ventures.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="service2">
+                        <div class="d-flex"
+                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
+                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/machine.svg"
+                                alt="">
+
+                            <div class="mt-1">
+                                <h4 style="font-size: 20px;font-weight: 500;">Machine Learning</h4>
+                                <p style="font-size: 15px;">Delve into the Realm of Machine Learning with Our Tailored
+                                    Services, Enhancing Data Insights, Boosting Efficiency,
+                                    and Nurturing Growth, Supported by Our Commitment to Innovative Solutions and Your
+                                    Path to Success.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service3">
+                        <div class="d-flex"
+                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
+                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/frontend.svg"
+                                alt="">
+
+                            <div class="mt-1">
+                                <h4 style="font-size: 20px;font-weight: 500;">Front-End</h4>
+                                <p style="font-size: 15px;">Embark on a Journey into Front-End Excellence with Our
+                                    Specialized Services, Elevating User Experience,
+                                    Crafting Innovative Solutions, and Paving the Way for Your Success through Effective
+                                    Design. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service4">
+                        <div class="d-flex"
+                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
+                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/design.svg"
+                                alt="">
+
+                            <div class="mt-1">
+                                <h4 style="font-size: 20px;font-weight: 500;">UI/UX Design</h4>
+                                <p style="font-size: 15px;">Immerse Yourself in UI/UX Mastery with Our Specialized
+                                    Services,
+                                    Focused on Elevating User Experience, Crafting Innovative Designs, and Paving the
+                                    Path to Your Success in User-Centric Solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service5">
+                        <div class="d-flex"
+                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
+                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/mobiledev.svg"
+                                alt="">
+
+                            <div class="mt-1">
+                                <h4 style="font-size: 20px;font-weight: 500;">Mobile</h4>
+                                <h4 style="font-size: 20px;font-weight: 500;">Application</h4>
+                                <p style="font-size: 15px;">
+                                    Embark on an Exciting Journey to Mobile Excellence with Our Diverse Portfolio of
+                                    Tailored Mobile Application Services,
+                                    Creatively Designed to Enhance Your Mobile Presence, Streamline Operational
+                                    Efficiency, Cultivate Sustainable Growth,
+                                    and Establish a Legacy of Remarkable Achievements. Our Unwavering Passion for
+                                    Delivering Top-Quality Solutions and Providing
+                                    Full Support in Your Thrilling Mobile Ventures Powers Your Path to Digital Triumph.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service6">
+                        <div class="d-flex"
+                            style="flex-direction: column;width: 100%;height: 20%;align-items: left;justify-content: left;">
+                            <img style="height: 80px; width: 80px; margin-bottom: 20px;" src="assets/img/backend.svg"
+                                alt="">
+
+                            <div class="mt-1">
+                                <h4 style="font-size: 20px;font-weight: 500;">Back-End</h4>
+                                <p style="font-size: 15px;">Experience Back-End Excellence with Our Tailored Back-End
+                                    Service, Uplifting Functionality, Maximizing Efficiency,
+                                    and Cultivating Growth, Empowered by Our Dedication to Pioneering Solutions and
+                                    Enabling Your Journey to Triumph.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div id="getInTouch" style="margin-top: 150px;">
+
+            <div class="d-flex getInTouchWrapper" style="width: 80%;margin: auto;gap: 150px;justify-content: center;">
+                <div style="flex:3;">
+                    <h3>Get in touch with us</h3>
+                    <p>Reach Out and Connect with StartCode, Let's Collaborate, Answer Your Questions, and Support Your
+                        Journey to Success!</p>
+                </div>
+
+                <form style="flex: 4;" class="contact1-form validate-form" name="contact" data-netlify="true"
+                    onSubmit="submit" method="post" data-netlify-honeypot="bot-field">
+                    <input name="bot-field" class="d-none">
+
+                    <div class="row">
+                        <div class="col-md-6" data-validate="Name is required">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                        </div>
+                        <div class="col-md-6" data-validate="Valid email is required: leo@gmail.com">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-12" data-validate="Subject is required">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <div data-validate="Message is required">
+                        <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <br>
+
+                    <button class="btn btn-success w-100" style="background: #1A2634;">Send your message</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <img src="assets/img/footer.svg" style="width: 100%;margin-top:200px;margin-bottom: -10px;" alt="">
+        <div id="footer" style="background: #1A2634;color: white;">
+            <div class="container">
+                <div class="d-flex footerContainer" style="justify-content: space-between;padding: 20px;">
+                    <div class="brand d-flex  gap-2" style="flex:1">
+                        <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
+
+                        <h4 class="mt-3">STARTCODE</h4>
+                    </div>
+                    <div class="main d-flex flex-wrap" style="justify-content: space-evenly;flex:3">
+                        <div>
+                            <h4 style="font-size: 30px;">Services</h4>
+                            <ul class="footerUl">
+                                <li><a href="" class="link">Development</a></li>
+                                <li><a href="" class="link">Outsorce</a></li>
+                                <li><a href="" class="link">Ecosystem</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 30px;">Company</h4>
+
+                            <ul class="footerUl">
+                                <li><a href="" class="link">Security</a></li>
+                                <li><a href="" class="link">Terms</a></li>
+                                <li><a href="" class="link">Security</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 30px;">Contact & Adress</h4>
+
+                            <ul class="footerUl">
+                                <li>startcodedigital@gmail.com</li>
+                                <li>+62 852 8004 4559</li>
+                                <li>Bogor Barat, Bogor, Jawa Barat</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="social" style="flex:1">
+                        <h4 style="font-size: 30px;">Available On</h4>
+
+                        <div class="d-flex gap-3 ms-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" color="203E5F" height="25"
+                                fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <center>
+                    <div class="copy" style="padding: 40px;">
+                        Copyright © 2023 - StartCode
+                    </div>
+                </center>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="assets/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="assets/js/main.js"></script>
+
+
+    <script>
+        function scrollToElement(elementId) {
+            const targetElement = document.getElementById(elementId);
+            if (targetElement) {
+                const offset = 100; // Ubah offset sesuai dengan berapa banyak Anda ingin berhenti di atas elemen
+                const elementPosition = targetElement.offsetTop - offset;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth' // Untuk efek scroll yang halus, jika diperlukan
+                });
+            }
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/vendor/slick/slick.min.js"></script>
+    <script src="assets/vendor/splide-4.1.3/dist/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js"
+        integrity="sha256-l7eXiSofMCMpOBYpj9znCTM46MCE5nIP50pySV6W9lY=" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+    <script>
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            perMove: 1,
+            height: '100%',
+            pagination: false,
+            breakpoints: {
+                1000: {
+                    perPage: 1,
+                }
+            }
+        });
+
+        splide.mount();
+
+
+        setInterval(() => {
+            $('.splide__arrow--next:first').click();
+        }, 3000);
+    </script>
+
+    <script>
+        var splidePortfolio = new Splide('#splidePortfolio', {
+            type: 'loop',
+            perPage: 1,
+            perMove: 1,
+            height: '50rem',
+            cover: false,
+            autoWidth: true,
+            breakpoints: {
+                1000: {
+                    perPage: 1,
+                    autoWidth: false
+                }
+            }
+        });
+
+        splidePortfolio.mount();
+    </script>
+
+    <script>
+        function closeNavbar() {
+            $('#phoneNavbar').fadeOut(500);
+        }
+
+        function openNavbar() {
+            $('#phoneNavbar').fadeToggle(500);
+
+        }
+    </script>
+
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // function handleScroll() {
+        //     const navbar = document.getElementById("navbar");
+        //     const scrollTop = window.pageYOffset;
+
+        //     if (scrollTop > 100) { // Ubah angka ini sesuai dengan posisi yang Anda inginkan
+        //         navbar.classList.add("sticky");
+        //     } else {
+        //         navbar.classList.remove("sticky");
+        //     }
+        // }
+
+        // // Menambahkan event listener untuk memanggil fungsi handleScroll saat pengguna menggulir
+        // window.addEventListener("scroll", handleScroll);
+    </script>
+
+    <script>
+        var testi = new Splide('#testi', {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+            focus: 'center',
+            height: '20rem',
+            cover: false,
+            autoWidth: true,
+            autoplay: true,
+            breakpoints: {
+                1000: {
+                    perPage: 1,
+                    autoWidth: false
+                }
+            }
+        });
+
+        testi.mount();
+    </script>
+    <script src="assets/js/scripts.js" type="module"></script>
+</body>
+
+</html>
