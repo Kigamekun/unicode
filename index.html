@@ -540,7 +540,7 @@
                     </ul>
                 </div>
 
-                <div style="flex: 1; justify-content: flex-end;display: flex;">
+                <div class="kontek-us" style="flex: 1; justify-content: flex-end;display: flex;">
                     <button onclick="window.location.href='https://wa.me/6285280044559';"
                         class="contactUs link mt-4">Contact Us</button>
 
@@ -584,14 +584,13 @@
 
                 <div id="cl" class="d-flex" style="height:100px;width: 95%;margin: auto;">
                     <div style="flex:5;border-left:6px solid #5E4BF5;display: flex;align-items: center;">
-                        <p
-                            style="color: white;font-size: 48px;margin-top: 1rem; font-weight: 500;width: 20rem; margin-left: 70px;">
+                        <p class="featured-clients">
                             Meet our
                             featured clients
                         </p>
 
                     </div>
-                    <div style="flex:9;display: flex;justify-content: start;flex-wrap: wrap;gap:20px;">
+                    <div class="clients">
                         <div class="text-white">
                             <img src="assets/img/bonet-new.png" style="width: 36px;height: 36px;margin-right: 10px;"
                                 alt="">
@@ -1145,35 +1144,37 @@
             <br>
             <br>
             <div style="padding-left: 50px;padding-right: 50px;">
-                <form class="row g-3">
+                <form class="row g-3" data-netlify="true"
+                onSubmit="submit" method="post" data-netlify-honeypot="bot-field">
+                <input name="bot-field" class="d-none">
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" style="height: 60px;border-radius: 25px;"
-                            id="inputEmail4">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control"  name="name" placeholder="Input Name..." style="height: 60px;border-radius: 25px;"
+                            id="name">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" style="height: 60px;border-radius: 25px;"
-                            id="inputPassword4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control"  name="email" placeholder="Input Email..." style="height: 60px;border-radius: 25px;"
+                            id="email">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" style="height: 60px;border-radius: 25px;"
-                            id="inputEmail4">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" name="subject" placeholder="Input Subject..."  style="height: 60px;border-radius: 25px;"
+                            id="subject">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" style="height: 60px;border-radius: 25px;"
-                            id="inputPassword4">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="number" class="form-control" name="phone" placeholder="Input Phone Number..."  style="height: 60px;border-radius: 25px;"
+                            id="phone">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Address 2</label>
-                        <input type="text" class="form-control" style="height: 150px;border-radius: 25px;"
-                            id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <label for="message" class="form-label">Message</label>
+                        <input type="text" class="form-control" name="phone" style="height: 150px;border-radius: 25px;"
+                            id="message" placeholder="Input Message...">
                     </div>
                     <div class="col-12 mt-5">
                         <button type="submit" class="btn w-100 text-white"
-                            style="background: #5E4BF5;height: 60px;border-radius: 25px;">Sign in</button>
+                            style="background: #5E4BF5;height: 60px;border-radius: 25px;">Send</button>
                     </div>
                 </form>
             </div>
