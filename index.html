@@ -127,6 +127,67 @@
         }
 
 
+
+
+        .searchbox-wrap {
+            display: flex;
+            width: 500px;
+            height: 60px;
+            margin-top: 8%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .searchbox-wrap input {
+            flex: 1;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            -webkit-border-top-left-radius: 25px;
+            -webkit-border-bottom-left-radius: 25px;
+            -moz-border-radius-topleft: 25px;
+            -moz-border-radius-bottomleft: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            box-shadow: none;
+            border: none;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
+        }
+
+        .searchbox-wrap button {
+            padding-right: 10px;
+            background-color: #fff;
+            -webkit-border-top-right-radius: 25px;
+            -webkit-border-bottom-right-radius: 25px;
+            -moz-border-radius-topright: 25px;
+            -moz-border-radius-bottomright: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.19);
+            border: none;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .searchbox-wrap button span {
+            margin-left: 50px;
+            padding: 16px 45px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: #fff;
+            background-color: #5E4BF5;
+            border-radius: 20px;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
+        }
+
+        .searchbox-wrap button span:hover {
+            background-color: #5140d3;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.19);
+        }
+
+
+
+
         .wrapper {
             width: 50%;
             display: flex;
@@ -532,14 +593,15 @@
                 <br>
 
                 <div id="cl" class="d-flex" style="height:100px;width: 95%;margin: auto;">
-                    <div class="meet" style="border-left:6px solid #5E4BF5;display: flex;align-items: center;">
-                        <p class="featured-clients">
+                    <div style="flex:5;border-left:6px solid #5E4BF5;display: flex;align-items: center;">
+                        <p
+                            style="color: white;font-size: 48px;margin-top: 1rem; font-weight: 500;width: 20rem; margin-left: 70px;">
                             Meet our
                             featured clients
                         </p>
 
                     </div>
-                    <div class="clients">
+                    <div style="flex:9;display: flex;justify-content: start;flex-wrap: wrap;gap:20px;">
                         <div class="text-white">
                             <img src="assets/img/bonet-new.png" style="width: 36px;height: 36px;margin-right: 10px;"
                                 alt="">
@@ -761,7 +823,7 @@
                         <img src="assets/img/react.svg" style="width: 64px;height: 64px;" alt="">
                         <div style="font-size: 22px;">Web Application</div>
                     </div>
-                    <p class="intergrate-p">A web application is a dynamic
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
                         software program that operates over the internet, allowing users to interact with it through web
                         browsers. These applications provide a wide range of functions and services, such as online
                         shopping, social networking, email services, document editing, and more.</p>
@@ -772,8 +834,9 @@
                     <div class="d-flex align-items-center gap-3">
                         <img src="assets/img/figma.svg" style="width: 64px;height: 64px;" alt="">
                         <div style="font-size: 22px;">Web Application</div>
+
                     </div>
-                    <p class="intergrate-p">A web application is a dynamic
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
                         software program that operates over the internet, allowing users to interact with it through web
                         browsers. These applications provide a wide range of functions and services, such as online
                         shopping, social networking, email services, document editing, and more.</p>
@@ -787,7 +850,7 @@
                         <div style="font-size: 22px;">Web Application</div>
 
                     </div>
-                    <p class="intergrate-p">A web application is a dynamic
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
                         software program that operates over the internet, allowing users to interact with it through web
                         browsers. These applications provide a wide range of functions and services, such as online
                         shopping, social networking, email services, document editing, and more.</p>
@@ -799,7 +862,7 @@
                         <div style="font-size: 22px;">Web Application</div>
 
                     </div>
-                    <p class="intergrate-p">A web application is a dynamic
+                    <p style="font-size: 15px;text-align: justify;margin-top: 20px;">A web application is a dynamic
                         software program that operates over the internet, allowing users to interact with it through web
                         browsers. These applications provide a wide range of functions and services, such as online
                         shopping, social networking, email services, document editing, and more.</p>
@@ -817,13 +880,12 @@
             <br>
             <br>
             <br>
-            <div class="cuntainer"></div>
 
         </div>
-    
+
 
         <div id="feedbacks" style="background-color: #1C2025;">
-            <div class="feedback">
+            <div style="width: 90%;margin:auto">
                 <div class="title" style="text-align: left; font-size: 44px;">
                     Feedback from delighted clients
                 </div>
@@ -1120,37 +1182,35 @@
             <br>
             <br>
             <div style="padding-left: 50px;padding-right: 50px;">
-                <form class="row g-3" data-netlify="true"
-                onSubmit="submit" method="post" data-netlify-honeypot="bot-field">
-                <input name="bot-field" class="d-none">
+                <form class="row g-3">
                     <div class="col-md-6">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control"  name="name" placeholder="Input Name..." style="height: 60px;border-radius: 25px;"
-                            id="name">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputEmail4">
                     </div>
                     <div class="col-md-6">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control"  name="email" placeholder="Input Email..." style="height: 60px;border-radius: 25px;"
-                            id="email">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputPassword4">
                     </div>
                     <div class="col-md-6">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" name="subject" placeholder="Input Subject..."  style="height: 60px;border-radius: 25px;"
-                            id="subject">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputEmail4">
                     </div>
                     <div class="col-md-6">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="number" class="form-control" name="phone" placeholder="Input Phone Number..."  style="height: 60px;border-radius: 25px;"
-                            id="phone">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" style="height: 60px;border-radius: 25px;"
+                            id="inputPassword4">
                     </div>
                     <div class="col-12">
-                        <label for="message" class="form-label">Message</label>
-                        <input type="text" class="form-control" name="phone" style="height: 150px;border-radius: 25px;"
-                            id="message" placeholder="Input Message...">
+                        <label for="inputAddress2" class="form-label">Address 2</label>
+                        <input type="text" class="form-control" style="height: 150px;border-radius: 25px;"
+                            id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="col-12 mt-5">
                         <button type="submit" class="btn w-100 text-white"
-                            style="background: #5E4BF5;height: 60px;border-radius: 25px;">Send</button>
+                            style="background: #5E4BF5;height: 60px;border-radius: 25px;">Sign in</button>
                     </div>
                 </form>
             </div>
@@ -1172,7 +1232,7 @@
                 <div class="brand d-flex  gap-2" style="flex:1">
                     <img src="assets/img/scode.svg" style="width: 50px;height: 50px;" alt="">
 
-                    <h4 class="mt-3">StartCode</h4>
+                    <h4 class="mt-3">Startcode</h4>
                 </div>
                 <div class="main d-flex flex-wrap" style="justify-content: space-evenly;flex:3">
                     <div>
