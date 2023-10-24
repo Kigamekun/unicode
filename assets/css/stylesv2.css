@@ -796,6 +796,7 @@ h1 {
     margin-left: 50px;
     padding: 16px 45px;
     font-size: 0.9em;
+    display: inline-block;
     text-transform: uppercase;
     font-weight: 300;
     color: #fff;
@@ -832,6 +833,8 @@ h1 {
 }
 
 
+
+
 @media screen and (max-width: 600px) {
     html,body
 {
@@ -863,12 +866,11 @@ h1 {
 
 
 .searchbox-wrap {
-    display: flex;
-    z-index: 2;
+    background-color: tomato;
     text-align: center;
     justify-content: center;
     position: relative;
-    width: 500px;
+    width: 200px;
     height: 60px;
     margin-top: 0%;
     margin-left: auto;
@@ -876,6 +878,7 @@ h1 {
 }
 .searchbox-wrap input {
     flex: 1;
+    display: inline;
     padding: 15px 20px;
     font-size: 1.1em;
     -webkit-border-top-left-radius: 25px;
@@ -890,7 +893,8 @@ h1 {
 }
 
 .searchbox-wrap button {
-    padding-right: 10px;
+    display: inline;
+    padding-right: 1px;
     background-color: #fff;
     -webkit-border-top-right-radius: 25px;
     -webkit-border-bottom-right-radius: 25px;
@@ -905,9 +909,10 @@ h1 {
 }
 
 .searchbox-wrap button span {
-    margin-left: 50px;
+    display: inline;
+    margin-left: 10px;
     padding: 16px 45px;
-    font-size: 0.9em;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 300;
     color: #fff;
@@ -917,6 +922,7 @@ h1 {
 }
 
 .searchbox-wrap button span:hover {
+    display: inline;
     background-color: #5140d3;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.19);
 }
@@ -934,5 +940,27 @@ h1 {
     margin-left: 70px;
 }
 
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    }
+}
+
+@media (min-width: 992px) {
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    }    
 }
 
