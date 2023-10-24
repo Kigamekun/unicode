@@ -844,6 +844,10 @@ h1 {
     margin: auto;
 
 }
+.meet {
+    flex:5;
+}
+
 
 .integrate-services{
     flex:1;
@@ -867,6 +871,26 @@ h1 {
     padding: 0px;
     overflow-x: hidden; 
 }
+
+#cl {
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+
+.meet {
+    width: 100%;
+    flex:unset !important; 
+}
+
+.featured-clients {
+    width: 100% !important;
+}
+
+.clients {
+    flex:unset !important; 
+}
+
 
 .searchbox-wrap {
     background-color: tomato;
