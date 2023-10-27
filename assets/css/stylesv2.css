@@ -727,6 +727,10 @@ h1 {
     .wrapper {
         width: 80% !important;
     }
+
+    .menu {
+        display: none !important;
+    }
     .service-wrapper {
         width: unset !important;
         height: unset !important;
