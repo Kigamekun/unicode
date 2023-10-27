@@ -641,6 +641,87 @@ h1 {
 .getintouch {
     margin-bottom: 150px;
 }
+
+.contactUs {
+    --border-width: 2px;
+    --border-radius: 22px;
+    --color-1: #FFFFFF;
+    --color-2: #9C6DFF;
+
+
+}
+
+.contactUs {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ddd;
+    position: relative;
+    background: linear-gradient(to right, #FFFFFF, #9C6DFF),
+        linear-gradient(to right, #FFFFFF, #9C6DFF);
+    background-position: var(--border-radius) 0, var(--border-radius) 100%;
+    background-repeat: no-repeat;
+    background-size: calc(100% - var(--border-radius) - var(--border-radius)) var(--border-width);
+    padding: 14px 24px;
+    border-radius: var(--border-radius);
+    border: none;
+    z-index: 999999;
+}
+
+.contactUs:before,
+.contactUs:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--border-radius);
+    top: 0;
+    bottom: 0;
+}
+
+.contactUs:before {
+    left: 0;
+    border: var(--border-width) solid var(--color-1);
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    border-right-color: transparent;
+}
+
+.contactUs:after {
+    right: 0;
+    border: var(--border-width) solid var(--color-2);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-left-color: transparent;
+}
+
+@media only screen and (max-width: 400px) {
+
+.contactUs {
+    --border-width: 2px;
+    --border-radius: 22px;
+    --color-1: #FFFFFF;
+    --color-2: #9C6DFF;
+
+
+}
+
+.contactUs {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ddd;
+    position: relative;
+    background: linear-gradient(to right, #FFFFFF, #9C6DFF),
+        linear-gradient(to right, #FFFFFF, #9C6DFF);
+    background-position: var(--border-radius) 0, var(--border-radius) 100%;
+    background-repeat: no-repeat;
+    background-size: calc(100% - var(--border-radius) - var(--border-radius)) var(--border-width);
+    padding: 10px 5px;
+    border-radius: var(--border-radius);
+    border: none;
+    z-index: 999999;
+}
+
+}
+
 @media only screen and (max-width: 1000px) {
 
     .wrapper {
@@ -738,15 +819,6 @@ h1 {
     .brand h3 {
         font-size: 20px;
     }
-
-    .contactUs {
-        display: none;
-    }
-
-
-
-
-
 
     .searchbox-wrap {
         display: flex;
