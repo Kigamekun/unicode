@@ -12,10 +12,10 @@
     <meta name="author" content="Startcode Indonesia">
     <meta property="og:title" content="Startcode Your Code Friend's" />
     <meta property="og:url" content="https://startcode.id" />
-    <meta property="og:image" itemprop="image" content="assets/img/scode.svg" />
+    <meta property="og:image" itemprop="image" content="assets/scode.png" />
     <link rel="stylesheet" href="assets/vendor/slick/slick.css">
     <link rel="stylesheet" href="assets/vendor/slick/slick-theme.css">
-    <meta property="og:image:url" itemprop="image" content="assets/img/scode.svg" />
+    <meta property="og:image:url" itemprop="image" content="assets/scode.png" />
     <meta property="og:image:type" content="image/png" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -559,9 +559,6 @@
                             <img src="assets/img/tni.png" style="height: 36px;margin-right: 10px;" alt="">
                         </div>
                         <div class="text-white">
-                            <img src="assets/img/Direktoran Jenderal Pajak (DJP) Logogram.png" style="height: 36px;margin-right: 10px;" alt="">
-                        </div>
-                        <div class="text-white">
                             <img src="assets/img/logo-bkad.png" style="height: 36px;margin-right: 10px;" alt="">
                         </div>
                         <div class="text-white">
@@ -581,6 +578,12 @@
                         </div>
                         <div class="text-white">
                             <img src="assets/img/moodprimalogo.png" style="height: 36px;margin-right: 10px;" alt="">
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/Bogor_Agricultural_University_(IPB)_symbol.svg" style="height: 36px;margin-right: 10px;" alt="">
+                        </div>
+                        <div class="text-white">
+                            <img src="assets/img/Direktoran Jenderal Pajak (DJP) Logogram.png" style="height: 36px;margin-right: 10px;" alt="">
                         </div>
                         <div class="text-white">
                             <img src="assets/img/Travel-wifi-light.png" style="height: 36px;margin-right: 10px;" alt="">
@@ -766,7 +769,7 @@
                                     <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;"
                                         src="assets/img/branding-ABL Compro.png" alt="Work 1">
                                     <div class="p-inner">
-                                        <h5>Asian Bulk Logistics</h5>
+                                        <h5>Golden Kitchen Spray and Renovation, Australia</h5>
                                         <div class="cat">Branding</div>
                                     </div>
                                 </div>
@@ -776,7 +779,7 @@
                                     <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;"
                                         src="assets/img/branding-Djp Bandung.png" alt="Work 1">
                                     <div class="p-inner">
-                                        <h5>Direktorat Jendral Pajak</h5>
+                                        <h5>Golden Kitchen Spray and Renovation, Australia</h5>
                                         <div class="cat">Branding</div>
                                     </div>
                                 </div>
@@ -786,7 +789,7 @@
                                     <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;"
                                         src="assets/img/branding-IPB Campus tour .png" alt="Work 1">
                                     <div class="p-inner">
-                                        <h5>Institut Pertanian Bogor</h5>
+                                        <h5>Golden Kitchen Spray and Renovation, Australia</h5>
                                         <div class="cat">Branding</div>
                                     </div>
                                 </div>
@@ -796,7 +799,7 @@
                                     <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;"
                                         src="assets/img/branding-kemensos pejuang muda.png" alt="Work 1">
                                     <div class="p-inner">
-                                        <h5>Kemensos Indonesia</h5>
+                                        <h5>Golden Kitchen Spray and Renovation, Australia</h5>
                                         <div class="cat">Branding</div>
                                     </div>
                                 </div>
@@ -806,7 +809,7 @@
                                     <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;"
                                         src="assets/img/branding-Travel wifi.png" alt="Work 1">
                                     <div class="p-inner">
-                                        <h5>Travel WiFi</h5>
+                                        <h5>Golden Kitchen Spray and Renovation, Australia</h5>
                                         <div class="cat">Branding</div>
                                     </div>
                                 </div>
@@ -816,7 +819,7 @@
                                     <img style="border-radius: 25px;height: 500px;object-fit: cover;object-position: top;"
                                         src="assets/img/branding-Youtube docter siska.png" alt="Work 1">
                                     <div class="p-inner">
-                                        <h5>Dokter Siska</h5>
+                                        <h5>Golden Kitchen Spray and Renovation, Australia</h5>
                                         <div class="cat">Branding</div>
                                     </div>
                                 </div>
@@ -1255,9 +1258,9 @@
             <br>
             <br>
             <div style=" padding-left: 50px;padding-right: 50px;">
-                <form class="row g-3" data-netlify="true" onSubmit="submit" method="post"
-                    data-netlify-honeypot="bot-field">
-                    <input name="bot-field" class="d-none">
+                <form class="row g-3"  name="contact" method="POST" data-netlify="true" netlifly>
+                    <input type="hidden" name="form-name" value="contact">
+
                     <div class="col-md-6">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Input Name..."
@@ -1280,7 +1283,7 @@
                     </div>
                     <div class="col-12">
                         <label for="message" class="form-label">Message</label>
-                        <input type="text" class="form-control" name="phone" style="height: 150px;border-radius: 25px;"
+                        <input type="text" class="form-control" name="message" style="height: 150px;border-radius: 25px;"
                             id="message" placeholder="Input Message...">
                     </div>
                     <div class="col-12 mt-5">
